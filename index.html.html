@@ -1,0 +1,2264 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ReelRoulette // Viral Topic, Research &amp; Canva Reel Studio</title>
+  <meta name="description" content="Generate viral, high-retention topics for Instagram Reels, TikTok, and YouTube Shorts. Complete with 3-second hooks, 3-act script blueprints, live trends explorer, and 1-click Canva 9:16 reel templates with pop-up keyword edits and sound effects." />
+  <style>
+    /* CSS Variables: Studio Light Theme (Default) */
+    :root[data-theme="light"] {
+      --bg-base: #f8fafc;
+      --bg-surface: #ffffff;
+      --bg-card: #ffffff;
+      --bg-card-hover: #f1f5f9;
+      --bg-secondary: #f1f5f9;
+      --border-subtle: #e2e8f0;
+      --border-focus: #cbd5e1;
+      --border-glow: rgba(99, 102, 241, 0.25);
+      --primary: #4f46e5;
+      --primary-hover: #4338ca;
+      --primary-light: #eef2ff;
+      --accent-cyan: #0284c7;
+      --accent-amber: #d97706;
+      --accent-rose: #e11d48;
+      --accent-emerald: #059669;
+      --accent-purple: #7c3aed;
+      --text-main: #0f172a;
+      --text-muted: #475569;
+      --text-dim: #64748b;
+      --card-shadow: 0 10px 30px -5px rgba(0, 0, 0, 0.06), 0 4px 12px -2px rgba(0, 0, 0, 0.04);
+      --card-shadow-hover: 0 20px 40px -10px rgba(0, 0, 0, 0.12);
+      --phone-bg: #0f172a;
+    }
+
+    /* Dark Theme */
+    :root[data-theme="dark"] {
+      --bg-base: #07090e;
+      --bg-surface: #0f1422;
+      --bg-card: #151c2e;
+      --bg-card-hover: #1b243b;
+      --bg-secondary: #12192b;
+      --border-subtle: rgba(255, 255, 255, 0.08);
+      --border-focus: rgba(255, 255, 255, 0.18);
+      --border-glow: rgba(99, 102, 241, 0.35);
+      --primary: #6366f1;
+      --primary-hover: #4f46e5;
+      --primary-light: rgba(99, 102, 241, 0.15);
+      --accent-cyan: #06b6d4;
+      --accent-amber: #f59e0b;
+      --accent-rose: #f43f5e;
+      --accent-emerald: #10b981;
+      --accent-purple: #a855f7;
+      --text-main: #f8fafc;
+      --text-muted: #94a3b8;
+      --text-dim: #64748b;
+      --card-shadow: 0 20px 50px rgba(0, 0, 0, 0.5), 0 0 30px rgba(99, 102, 241, 0.1);
+      --card-shadow-hover: 0 25px 60px rgba(0, 0, 0, 0.7);
+      --phone-bg: #000000;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg-base);
+      color: var(--text-main);
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      line-height: 1.5;
+      overflow-x: hidden;
+      transition: background-color 0.25s ease, color 0.25s ease;
+    }
+
+    /* Ambient background gradient */
+    body::before {
+      content: '';
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 600px;
+      background: radial-gradient(circle at 50% -10%, rgba(99, 102, 241, 0.10) 0%, transparent 60%);
+      pointer-events: none;
+      z-index: 0;
+    }
+
+    /* Navigation */
+    header {
+      border-bottom: 1px solid var(--border-subtle);
+      background: var(--bg-surface);
+      position: sticky;
+      top: 0;
+      z-index: 50;
+      padding: 0.75rem 1.5rem;
+      box-shadow: 0 1px 3px rgba(0, 0, 0, 0.04);
+    }
+
+    .nav-inner {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+    }
+
+    .logo-group {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+      text-decoration: none;
+      color: inherit;
+    }
+
+    .logo-badge {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      color: #fff;
+      font-weight: 900;
+      font-size: 1rem;
+      padding: 0.35rem 0.65rem;
+      border-radius: 8px;
+      letter-spacing: 0.5px;
+      box-shadow: 0 2px 8px rgba(79, 70, 229, 0.3);
+    }
+
+    .logo-text h1 {
+      font-size: 1.15rem;
+      font-weight: 800;
+      letter-spacing: -0.3px;
+      color: var(--text-main);
+    }
+
+    .logo-text p {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+      font-weight: 500;
+    }
+
+    .nav-actions {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .btn-secondary {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 0.45rem 0.8rem;
+      border-radius: 8px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-secondary:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .saved-badge {
+      background: var(--accent-rose);
+      color: #fff;
+      font-size: 0.7rem;
+      padding: 0.1rem 0.45rem;
+      border-radius: 999px;
+      font-weight: 700;
+    }
+
+    /* Main Container */
+    main {
+      flex: 1;
+      max-width: 1100px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 2rem 1.25rem 4rem;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Hero Panel */
+    .hero-panel {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    .hero-tagline {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: var(--primary-light);
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      padding: 0.3rem 0.85rem;
+      border-radius: 999px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      color: var(--primary);
+      margin-bottom: 0.85rem;
+    }
+
+    .hero-title {
+      font-size: clamp(1.8rem, 4vw, 2.7rem);
+      font-weight: 900;
+      letter-spacing: -0.03em;
+      line-height: 1.15;
+      margin-bottom: 0.6rem;
+      color: var(--text-main);
+    }
+
+    .hero-title span {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero-sub {
+      color: var(--text-muted);
+      font-size: clamp(0.9rem, 2vw, 1.05rem);
+      max-width: 680px;
+      margin: 0 auto 1.5rem;
+    }
+
+    /* Control Deck */
+    .control-deck {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 1.25rem;
+      margin-bottom: 2rem;
+    }
+
+    .category-pills {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 0.5rem;
+    }
+
+    .pill-btn {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      padding: 0.45rem 0.9rem;
+      border-radius: 999px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.03);
+    }
+
+    .pill-btn:hover {
+      background: var(--bg-secondary);
+      color: var(--text-main);
+      border-color: var(--border-focus);
+    }
+
+    .pill-btn.active {
+      background: var(--primary);
+      border-color: var(--primary);
+      color: #fff;
+      box-shadow: 0 4px 12px rgba(79, 70, 229, 0.3);
+    }
+
+    /* Big Spin Button */
+    .roll-action-wrap {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .btn-roll {
+      background: linear-gradient(135deg, var(--primary), var(--accent-cyan));
+      color: #fff;
+      border: none;
+      padding: 0.95rem 2.25rem;
+      border-radius: 14px;
+      font-size: 1.12rem;
+      font-weight: 800;
+      letter-spacing: -0.2px;
+      cursor: pointer;
+      box-shadow: 0 6px 20px rgba(79, 70, 229, 0.35);
+      transition: all 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .btn-roll:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(79, 70, 229, 0.45);
+    }
+
+    .btn-roll:active {
+      transform: translateY(1px);
+    }
+
+    .btn-roll .dice-icon {
+      font-size: 1.35rem;
+      transition: transform 0.4s ease;
+    }
+
+    .btn-roll:hover .dice-icon {
+      transform: rotate(180deg);
+    }
+
+    .roll-shortcut {
+      font-size: 0.75rem;
+      color: var(--text-dim);
+    }
+
+    .roll-shortcut kbd {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      font-family: monospace;
+      color: var(--text-muted);
+    }
+
+    /* Topic Card Presentation */
+    .card-stage {
+      perspective: 1000px;
+      margin-bottom: 2.5rem;
+    }
+
+    .topic-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      padding: clamp(1.25rem, 3.5vw, 2.25rem);
+      box-shadow: var(--card-shadow);
+      position: relative;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      overflow: hidden;
+    }
+
+    .topic-card::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      height: 4px;
+      background: linear-gradient(90deg, var(--primary), var(--accent-cyan), var(--accent-rose));
+    }
+
+    .topic-card.rolling {
+      animation: cardPulse 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    }
+
+    @keyframes cardPulse {
+      0% { transform: scale(1); opacity: 1; }
+      50% { transform: scale(0.98) translateY(4px); opacity: 0.8; }
+      100% { transform: scale(1); opacity: 1; }
+    }
+
+    /* Meta Badges */
+    .card-header-meta {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 0.75rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .meta-badges {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 0.5rem;
+    }
+
+    .badge {
+      font-size: 0.75rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.3rem 0.65rem;
+      border-radius: 6px;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+    }
+
+    .badge-brand {
+      background: rgba(217, 119, 6, 0.12);
+      color: #b45309;
+      border: 1px solid rgba(217, 119, 6, 0.3);
+    }
+
+    .badge-business {
+      background: rgba(225, 29, 72, 0.12);
+      color: #be123c;
+      border: 1px solid rgba(225, 29, 72, 0.3);
+    }
+
+    .badge-psych {
+      background: rgba(124, 58, 237, 0.12);
+      color: #6d28d9;
+      border: 1px solid rgba(124, 58, 237, 0.3);
+    }
+
+    .badge-marketing {
+      background: rgba(2, 132, 199, 0.12);
+      color: #0369a1;
+      border: 1px solid rgba(2, 132, 199, 0.3);
+    }
+
+    .badge-vibe {
+      background: var(--bg-secondary);
+      color: var(--text-muted);
+      border: 1px solid var(--border-subtle);
+    }
+
+    .card-tools {
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-icon {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      width: 36px;
+      height: 36px;
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      cursor: pointer;
+      font-size: 0.95rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-icon:hover {
+      background: var(--border-subtle);
+      color: var(--text-main);
+    }
+
+    .btn-icon.active {
+      background: rgba(225, 29, 72, 0.12);
+      color: var(--accent-rose);
+      border-color: rgba(225, 29, 72, 0.3);
+    }
+
+    .card-title {
+      font-size: clamp(1.4rem, 3vw, 2.1rem);
+      font-weight: 900;
+      letter-spacing: -0.02em;
+      line-height: 1.2;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+
+    .card-subtitle {
+      font-size: 0.98rem;
+      color: var(--accent-cyan);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+    }
+
+    /* 3-Second Hook Box */
+    .hook-banner {
+      background: linear-gradient(135deg, rgba(79, 70, 229, 0.08), rgba(2, 132, 199, 0.05));
+      border: 1px solid rgba(79, 70, 229, 0.2);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .hook-banner-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.6rem;
+    }
+
+    .hook-label {
+      font-size: 0.75rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.6px;
+      color: var(--primary);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-copy-hook {
+      background: rgba(79, 70, 229, 0.12);
+      border: 1px solid rgba(79, 70, 229, 0.3);
+      color: var(--primary);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy-hook:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    .hook-text {
+      font-size: clamp(1rem, 2vw, 1.15rem);
+      font-weight: 700;
+      line-height: 1.45;
+      color: var(--text-main);
+      font-style: italic;
+    }
+
+    .hook-alt-toggle {
+      margin-top: 0.65rem;
+      padding-top: 0.55rem;
+      border-top: 1px dashed var(--border-subtle);
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .hook-alt-toggle strong {
+      color: var(--text-main);
+    }
+
+    /* ACTION CALLOUT: GENERATE CANVA REEL TEMPLATE BUTTON */
+    .canva-action-banner {
+      background: linear-gradient(135deg, #00c4cc, #7d2ae8);
+      color: #ffffff;
+      border-radius: 14px;
+      padding: 1.1rem 1.25rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      box-shadow: 0 8px 20px rgba(125, 42, 232, 0.25);
+    }
+
+    .canva-action-left h3 {
+      font-size: 1.05rem;
+      font-weight: 900;
+      letter-spacing: -0.2px;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .canva-action-left p {
+      font-size: 0.82rem;
+      opacity: 0.92;
+      margin-top: 0.15rem;
+    }
+
+    .btn-canva-trigger {
+      background: #ffffff;
+      color: #7d2ae8;
+      border: none;
+      font-size: 0.88rem;
+      font-weight: 800;
+      padding: 0.65rem 1.25rem;
+      border-radius: 10px;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+      transition: all 0.15s ease;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+    }
+
+    .btn-canva-trigger:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.22);
+      color: #6b21a8;
+    }
+
+    /* Concept Breakdown Grid */
+    .section-heading {
+      font-size: 0.82rem;
+      text-transform: uppercase;
+      letter-spacing: 0.8px;
+      font-weight: 800;
+      color: var(--text-dim);
+      margin-bottom: 0.75rem;
+      display: flex;
+      align-items: center;
+      gap: 0.45rem;
+    }
+
+    .breakdown-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .breakdown-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 0.95rem;
+    }
+
+    .breakdown-tag {
+      font-size: 0.72rem;
+      font-weight: 800;
+      text-transform: uppercase;
+      color: var(--accent-amber);
+      margin-bottom: 0.25rem;
+    }
+
+    .breakdown-text {
+      font-size: 0.88rem;
+      color: var(--text-muted);
+      line-height: 1.45;
+    }
+
+    /* 3-Act Script Blueprint */
+    .script-blueprint {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.25rem;
+      margin-bottom: 1.5rem;
+      box-shadow: 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+
+    .script-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 0.85rem;
+    }
+
+    .script-header h3 {
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .btn-copy-script {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+      font-size: 0.75rem;
+      font-weight: 700;
+      padding: 0.25rem 0.65rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: all 0.15s ease;
+    }
+
+    .btn-copy-script:hover {
+      background: var(--primary);
+      color: #fff;
+      border-color: var(--primary);
+    }
+
+    .script-steps {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+    }
+
+    .script-step {
+      display: flex;
+      gap: 0.85rem;
+      font-size: 0.88rem;
+    }
+
+    .step-badge {
+      flex-shrink: 0;
+      font-family: monospace;
+      font-size: 0.72rem;
+      font-weight: 700;
+      background: var(--bg-secondary);
+      color: var(--text-dim);
+      padding: 0.2rem 0.5rem;
+      border-radius: 6px;
+      height: fit-content;
+      border: 1px solid var(--border-subtle);
+    }
+
+    .step-content strong {
+      color: var(--text-main);
+      display: block;
+      margin-bottom: 0.15rem;
+    }
+
+    .step-content p {
+      color: var(--text-muted);
+      line-height: 1.4;
+    }
+
+    /* Creator Tips */
+    .creator-tips-bar {
+      background: rgba(5, 150, 105, 0.08);
+      border: 1px solid rgba(5, 150, 105, 0.25);
+      border-radius: 12px;
+      padding: 0.85rem 1rem;
+      margin-bottom: 1.5rem;
+      display: flex;
+      align-items: flex-start;
+      gap: 0.65rem;
+    }
+
+    .creator-tips-bar .icon {
+      font-size: 1.2rem;
+      line-height: 1;
+    }
+
+    .creator-tips-bar p {
+      font-size: 0.85rem;
+      color: var(--accent-emerald);
+      line-height: 1.4;
+    }
+
+    /* Research Queries */
+    .research-hub {
+      border-top: 1px solid var(--border-subtle);
+      padding-top: 1.15rem;
+    }
+
+    .research-links {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0.5rem;
+    }
+
+    .research-link {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      color: var(--accent-cyan);
+      text-decoration: none;
+      padding: 0.35rem 0.75rem;
+      border-radius: 8px;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: inline-flex;
+      align-items: center;
+      gap: 0.35rem;
+      transition: all 0.15s ease;
+    }
+
+    .research-link:hover {
+      background: rgba(2, 132, 199, 0.12);
+      border-color: var(--accent-cyan);
+      transform: translateY(-1px);
+    }
+
+    /* Bottom Status Bar */
+    .bottom-bar {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-top: 1.5rem;
+    }
+
+    .stats-counter {
+      font-size: 0.85rem;
+      color: var(--text-dim);
+    }
+
+    .stats-counter strong {
+      color: var(--text-main);
+    }
+
+    /* ============================================================
+       CANVA REEL TEMPLATE STUDIO MODAL
+       ============================================================ */
+    .modal-overlay {
+      position: fixed;
+      inset: 0;
+      background: rgba(15, 23, 42, 0.75);
+      backdrop-filter: blur(8px);
+      z-index: 100;
+      display: none;
+      align-items: center;
+      justify-content: center;
+      padding: 1.25rem;
+    }
+
+    .modal-overlay.open {
+      display: flex;
+    }
+
+    .modal-card {
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      border-radius: 20px;
+      max-width: 850px;
+      width: 100%;
+      max-height: 90vh;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 25px 60px rgba(0, 0, 0, 0.3);
+      overflow: hidden;
+    }
+
+    .modal-header {
+      padding: 1.25rem 1.5rem;
+      border-bottom: 1px solid var(--border-subtle);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: var(--bg-surface);
+    }
+
+    .modal-header h2 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .modal-body {
+      padding: 1.5rem;
+      overflow-y: auto;
+      flex: 1;
+    }
+
+    .modal-footer {
+      padding: 1rem 1.5rem;
+      border-top: 1px solid var(--border-subtle);
+      display: flex;
+      justify-content: flex-end;
+      gap: 0.75rem;
+      background: var(--bg-surface);
+    }
+
+    /* Canva Studio Layout: 9:16 Mockup + Timeline Cue Sheet */
+    .canva-studio-grid {
+      display: grid;
+      grid-template-columns: 280px 1fr;
+      gap: 1.5rem;
+    }
+
+    @media (max-width: 768px) {
+      .canva-studio-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    /* 9:16 Phone Mockup Preview */
+    .phone-mockup-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .phone-mockup {
+      width: 240px;
+      height: 426px;
+      background: var(--phone-bg);
+      border: 8px solid #1e293b;
+      border-radius: 36px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+      position: relative;
+      overflow: hidden;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      padding: 1rem 0.85rem;
+      color: #fff;
+    }
+
+    .phone-notch {
+      position: absolute;
+      top: 6px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 70px;
+      height: 14px;
+      background: #1e293b;
+      border-radius: 10px;
+      z-index: 10;
+    }
+
+    .mockup-user-video-slot {
+      position: absolute;
+      inset: 0;
+      background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      opacity: 0.85;
+      text-align: center;
+      padding: 1rem;
+    }
+
+    .mockup-user-video-slot span {
+      font-size: 2rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .mockup-user-video-slot p {
+      font-size: 0.72rem;
+      color: #94a3b8;
+      font-weight: 600;
+    }
+
+    /* Animated Pop-Up Layer inside Mockup */
+    .mockup-overlays {
+      position: relative;
+      z-index: 5;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      pointer-events: none;
+    }
+
+    .mockup-hook-card {
+      background: rgba(0, 0, 0, 0.75);
+      border: 2px solid #fbbf24;
+      border-radius: 10px;
+      padding: 0.5rem;
+      text-align: center;
+      font-weight: 900;
+      font-size: 0.78rem;
+      color: #fbbf24;
+      animation: popupBlink 2.5s infinite;
+      box-shadow: 0 4px 12px rgba(251, 191, 36, 0.3);
+    }
+
+    .mockup-keyword-pill {
+      background: rgba(79, 70, 229, 0.85);
+      backdrop-filter: blur(4px);
+      padding: 0.35rem 0.6rem;
+      border-radius: 8px;
+      font-size: 0.72rem;
+      font-weight: 800;
+      color: #fff;
+      text-align: center;
+      border: 1px solid rgba(255, 255, 255, 0.3);
+      width: 85%;
+      margin: 0 auto;
+    }
+
+    .mockup-audio-tag {
+      background: rgba(16, 185, 129, 0.85);
+      color: #fff;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.25rem 0.5rem;
+      border-radius: 999px;
+      width: fit-content;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+    }
+
+    @keyframes popupBlink {
+      0%, 100% { transform: scale(1); }
+      50% { transform: scale(1.04); }
+    }
+
+    /* Canva Timeline Cues */
+    .canva-timeline-wrapper h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      margin-bottom: 0.35rem;
+      color: var(--text-main);
+    }
+
+    .canva-timeline-wrapper p.desc {
+      font-size: 0.84rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .cue-table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.82rem;
+      margin-bottom: 1.25rem;
+    }
+
+    .cue-table th {
+      background: var(--bg-secondary);
+      color: var(--text-dim);
+      font-weight: 800;
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      padding: 0.5rem 0.75rem;
+      text-align: left;
+      border-bottom: 1px solid var(--border-subtle);
+    }
+
+    .cue-table td {
+      padding: 0.6rem 0.75rem;
+      border-bottom: 1px solid var(--border-subtle);
+      color: var(--text-muted);
+    }
+
+    .cue-time {
+      font-family: monospace;
+      font-weight: 700;
+      color: var(--accent-cyan);
+      white-space: nowrap;
+    }
+
+    .cue-text {
+      font-weight: 800;
+      color: var(--text-main);
+    }
+
+    .cue-sfx {
+      color: var(--accent-rose);
+      font-weight: 700;
+    }
+
+    /* 3-Step Instruction Cards */
+    .steps-mini-deck {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.75rem;
+      margin-top: 1rem;
+    }
+
+    .step-mini-card {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      padding: 0.75rem;
+      font-size: 0.8rem;
+    }
+
+    .step-mini-card strong {
+      display: block;
+      color: var(--primary);
+      margin-bottom: 0.2rem;
+      font-size: 0.85rem;
+    }
+
+    /* LIVE TRENDS ENGINE VIEW */
+    .trends-panel {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .trends-panel.active {
+      display: block;
+    }
+
+    .trends-header-box {
+      background: linear-gradient(135deg, rgba(2, 132, 199, 0.08), rgba(99, 102, 241, 0.08));
+      border: 1px solid rgba(2, 132, 199, 0.25);
+      border-radius: 16px;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .trends-header-box h3 {
+      font-size: 1.25rem;
+      font-weight: 800;
+      color: var(--text-main);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      margin-bottom: 0.35rem;
+    }
+
+    .trends-header-box p {
+      color: var(--text-muted);
+      font-size: 0.9rem;
+      max-width: 750px;
+    }
+
+    .trends-query-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+      gap: 1rem;
+      margin-bottom: 2rem;
+    }
+
+    .trend-query-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.25rem;
+      box-shadow: var(--card-shadow);
+    }
+
+    .trend-query-card h4 {
+      font-size: 1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-bottom: 0.35rem;
+      display: flex;
+      align-items: center;
+      gap: 0.4rem;
+    }
+
+    .trend-query-card p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-bottom: 1rem;
+    }
+
+    .btn-trend-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.4rem;
+      background: var(--primary-light);
+      color: var(--primary);
+      text-decoration: none;
+      font-size: 0.8rem;
+      font-weight: 700;
+      padding: 0.45rem 0.85rem;
+      border-radius: 8px;
+      transition: all 0.15s ease;
+    }
+
+    .btn-trend-link:hover {
+      background: var(--primary);
+      color: #fff;
+    }
+
+    /* DIRECTORY VIEW */
+    .directory-section {
+      display: none;
+      margin-top: 1.5rem;
+    }
+
+    .directory-section.active {
+      display: block;
+    }
+
+    .directory-header {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      justify-content: space-between;
+      gap: 1rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .search-box {
+      position: relative;
+      flex: 1;
+      max-width: 450px;
+    }
+
+    .search-input {
+      width: 100%;
+      background: var(--bg-surface);
+      border: 1px solid var(--border-subtle);
+      color: var(--text-main);
+      padding: 0.65rem 1rem 0.65rem 2.4rem;
+      border-radius: 10px;
+      font-size: 0.9rem;
+      outline: none;
+      transition: border-color 0.2s;
+    }
+
+    .search-input:focus {
+      border-color: var(--primary);
+    }
+
+    .search-icon {
+      position: absolute;
+      left: 0.85rem;
+      top: 50%;
+      transform: translateY(-50%);
+      color: var(--text-dim);
+      font-size: 0.9rem;
+    }
+
+    .grid-container {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .directory-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 14px;
+      padding: 1.25rem;
+      cursor: pointer;
+      transition: all 0.2s ease;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      box-shadow: var(--card-shadow);
+    }
+
+    .directory-card:hover {
+      border-color: var(--primary);
+      transform: translateY(-2px);
+      box-shadow: var(--card-shadow-hover);
+    }
+
+    .dir-title {
+      font-size: 1.1rem;
+      font-weight: 800;
+      color: var(--text-main);
+      margin-top: 0.4rem;
+      line-height: 1.3;
+    }
+
+    .dir-sub {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.25rem;
+    }
+
+    .dir-hook-snip {
+      background: var(--bg-secondary);
+      border-radius: 8px;
+      padding: 0.6rem;
+      font-size: 0.8rem;
+      color: var(--text-muted);
+      font-style: italic;
+      margin-top: 0.75rem;
+      line-height: 1.35;
+    }
+
+    .dir-footer {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-top: 1rem;
+      padding-top: 0.75rem;
+      border-top: 1px solid var(--border-subtle);
+      font-size: 0.78rem;
+      color: var(--text-dim);
+    }
+
+    /* Saved List Modal */
+    .saved-list {
+      display: flex;
+      flex-direction: column;
+      gap: 0.85rem;
+    }
+
+    .saved-item {
+      background: var(--bg-secondary);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: flex-start;
+      gap: 1rem;
+    }
+
+    .saved-info h4 {
+      font-size: 0.98rem;
+      font-weight: 700;
+      color: var(--text-main);
+    }
+
+    .saved-info p {
+      font-size: 0.82rem;
+      color: var(--text-muted);
+      margin-top: 0.2rem;
+    }
+
+    /* Toast Notification */
+    .toast {
+      position: fixed;
+      bottom: 2rem;
+      right: 2rem;
+      background: var(--text-main);
+      color: var(--bg-base);
+      padding: 0.75rem 1.25rem;
+      border-radius: 10px;
+      font-size: 0.85rem;
+      font-weight: 600;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      z-index: 200;
+      transform: translateY(100px);
+      opacity: 0;
+      transition: all 0.25s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    }
+
+    .toast.show {
+      transform: translateY(0);
+      opacity: 1;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid var(--border-subtle);
+      padding: 2.25rem 1.5rem;
+      text-align: center;
+      font-size: 0.82rem;
+      color: var(--text-dim);
+      background: var(--bg-surface);
+    }
+
+    footer a {
+      color: var(--primary);
+      text-decoration: none;
+      font-weight: 600;
+    }
+
+    @media (max-width: 640px) {
+      .breakdown-grid {
+        grid-template-columns: 1fr;
+      }
+      .card-header-meta {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+      .card-tools {
+        width: 100%;
+        justify-content: flex-end;
+      }
+      .canva-action-banner {
+        flex-direction: column;
+        align-items: stretch;
+      }
+      .btn-canva-trigger {
+        justify-content: center;
+      }
+      .btn-roll {
+        width: 100%;
+        justify-content: center;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top Navigation -->
+  <header>
+    <div class="nav-inner">
+      <div class="logo-group">
+        <div class="logo-badge">RR</div>
+        <div class="logo-text">
+          <h1>ReelRoulette</h1>
+          <p>Viral Topic &amp; Canva Reel Studio</p>
+        </div>
+      </div>
+      <div class="nav-actions">
+        <button id="viewTrendsBtn" class="btn-secondary">
+          <span>🔥 Live Trends</span>
+        </button>
+        <button id="viewToggleBtn" class="btn-secondary">
+          <span id="viewIcon">📚</span> <span id="viewLabel">Browse All</span>
+        </button>
+        <button id="themeToggleBtn" class="btn-secondary" title="Toggle Light/Dark Theme">
+          <span id="themeIcon">☀️ Light</span>
+        </button>
+        <button id="hostGuideBtn" class="btn-secondary" title="How to host this website">
+          <span>🌐 Host Website</span>
+        </button>
+        <button id="savedQueueBtn" class="btn-secondary">
+          <span>⭐ Queue</span>
+          <span id="savedCountBadge" class="saved-badge">0</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Main Content -->
+  <main>
+    <!-- Hero / Headline -->
+    <div class="hero-panel">
+      <div class="hero-tagline">
+        <span>🎬</span> Built for Short-Form Creators &bull; Reels, TikTok &amp; YouTube Shorts
+      </div>
+      <h2 class="hero-title">High-Retention Topics with <span>1-Click Canva Templates</span></h2>
+      <p class="hero-sub">
+        Discover viral brand secrets, dramatic Wall Street terms, and psychological anomalies. Get 3-second opening hooks, complete 3-act scripts, and automated 9:16 Canva video templates with keyword pop-ups and sound cues.
+      </p>
+
+      <!-- Category Filter Pills -->
+      <div class="control-deck">
+        <div class="category-pills" id="categoryPills">
+          <button class="pill-btn active" data-cat="all">🎲 All Categories</button>
+          <button class="pill-btn" data-cat="brand_secrets">🔥 Brand Secrets</button>
+          <button class="pill-btn" data-cat="dramatic_business_terms">⚡ Dramatic Business Terms</button>
+          <button class="pill-btn" data-cat="psychological_concepts">🧠 Psychological Concepts</button>
+          <button class="pill-btn" data-cat="marketing_hacks">🛒 Dark Marketing Hacks</button>
+        </div>
+
+        <!-- Big Spin Button -->
+        <div class="roll-action-wrap">
+          <button id="rollBtn" class="btn-roll">
+            <span class="dice-icon">🎲</span>
+            <span>ROLL NEXT TOPIC</span>
+          </button>
+          <span class="roll-shortcut">or press <kbd>Spacebar</kbd> anytime</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- MAIN RANDOMIZER VIEW -->
+    <div id="randomizerView" class="card-stage">
+      <div id="topicCard" class="topic-card">
+        
+        <!-- Header Meta -->
+        <div class="card-header-meta">
+          <div class="meta-badges">
+            <span id="catBadge" class="badge badge-brand">Brand Secrets</span>
+            <span id="vibeBadge" class="badge badge-vibe">Underdog Story</span>
+            <span id="difficultyBadge" class="badge badge-vibe">Quick Explainer</span>
+          </div>
+          <div class="card-tools">
+            <button id="saveBtn" class="btn-icon" title="Save to Queue">⭐</button>
+            <button id="copyAllBtn" class="btn-icon" title="Copy Full Pitch &amp; Script">📋</button>
+          </div>
+        </div>
+
+        <!-- Title & Subtitle -->
+        <h2 id="cardTitle" class="card-title">Topic Title Here</h2>
+        <div id="cardSubtitle" class="card-subtitle">One sentence high-concept summary</div>
+
+        <!-- NEW: 1-CLICK CANVA REEL TEMPLATE ACTION BANNER -->
+        <div class="canva-action-banner">
+          <div class="canva-action-left">
+            <h3>🎨 1-Click Canva Reel Template Ready</h3>
+            <p>9:16 layout generated with keyword pop-ups, sound effect cues, and video placeholder.</p>
+          </div>
+          <button id="openCanvaModalBtn" class="btn-canva-trigger">
+            <span>🎬 Open Canva Reel Blueprint</span>
+            <span>→</span>
+          </button>
+        </div>
+
+        <!-- 3-Second Hook Box -->
+        <div class="hook-banner">
+          <div class="hook-banner-header">
+            <span class="hook-label">🎯 3-Second Opening Hook (The Scroll-Stopper)</span>
+            <button id="copyHookBtn" class="btn-copy-hook">📋 Copy Hook</button>
+          </div>
+          <p id="hookText" class="hook-text">"Did you know..."</p>
+          <div class="hook-alt-toggle">
+            <strong>Alternative Hook:</strong> <span id="hookAltText">"What if I told you..."</span>
+          </div>
+        </div>
+
+        <!-- 3-Point Story Breakdown -->
+        <div class="section-heading">⚡ Concept Breakdown</div>
+        <div class="breakdown-grid" id="breakdownGrid"></div>
+
+        <!-- 3-Act Script Blueprint -->
+        <div class="script-blueprint">
+          <div class="script-header">
+            <h3>🎬 30-Second Reel Script Blueprint</h3>
+            <button id="copyScriptBtn" class="btn-copy-script">📋 Copy Script</button>
+          </div>
+          <div class="script-steps">
+            <div class="script-step">
+              <span class="step-badge">ACT 1 (0-5s)</span>
+              <div class="step-content">
+                <strong>The Hook &amp; Curiosity Gap</strong>
+                <p id="scriptAct1">Opening line...</p>
+              </div>
+            </div>
+            <div class="script-step">
+              <span class="step-badge">ACT 2 (5-25s)</span>
+              <div class="step-content">
+                <strong>The Twist &amp; Mechanism</strong>
+                <p id="scriptAct2">Story progression...</p>
+              </div>
+            </div>
+            <div class="script-step">
+              <span class="step-badge">ACT 3 (25-40s)</span>
+              <div class="step-content">
+                <strong>The Takeaway &amp; Call To Action</strong>
+                <p id="scriptAct3">Comment trigger question...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Creator Algorithm Angle -->
+        <div class="creator-tips-bar">
+          <span class="icon">💡</span>
+          <div>
+            <strong>Why This Performs On Short-Form Video:</strong>
+            <p id="creatorTipText">Tips...</p>
+          </div>
+        </div>
+
+        <!-- Research Queries Hub -->
+        <div class="research-hub">
+          <div class="section-heading">🔍 Instant Research Links (Open in Google)</div>
+          <div class="research-links" id="researchLinks"></div>
+        </div>
+
+      </div>
+
+      <!-- Navigation & Status Under Card -->
+      <div class="bottom-bar">
+        <div class="stats-counter">
+          Topic <strong id="currentIndexNum">1</strong> of <strong id="totalTopicsNum">30</strong> in pool
+        </div>
+        <div style="display: flex; gap: 0.5rem;">
+          <button id="prevBtn" class="btn-secondary">← Previous</button>
+          <button id="nextBtn" class="btn-secondary">Next Random →</button>
+        </div>
+      </div>
+    </div>
+
+    <!-- LIVE TRENDS ENGINE PANEL -->
+    <div id="trendsView" class="trends-panel">
+      <div class="trends-header-box">
+        <h3>🔥 Live Web &amp; Instagram Trends Engine</h3>
+        <p>
+          To keep your reels aligned with what is blowing up right now, use these real-time trend feeds and social signals across Google Trends, Instagram Explore, and Reddit discussions.
+        </p>
+      </div>
+
+      <div class="trends-query-cards">
+        <div class="trend-query-card">
+          <h4>📈 Google Trends Live Topics</h4>
+          <p>Real-time search volume spikes for business controversies, corporate news, and brand scandals.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="https://trends.google.com/trends/trendingsearches/daily" target="_blank" rel="noopener noreferrer" class="btn-trend-link">
+              🔍 Open Daily Google Trends
+            </a>
+            <a href="https://trends.google.com/trends/explore?q=brand%20secrets,business%20psychology" target="_blank" rel="noopener noreferrer" class="btn-trend-link">
+              📊 Explore Category Interest Spikes
+            </a>
+          </div>
+        </div>
+
+        <div class="trend-query-card">
+          <h4>📸 Instagram Reels Audio &amp; Tag Radar</h4>
+          <p>Monitor high-velocity hashtags and trending reels audio in business, psychology, and marketing.</p>
+          <div style="display: flex; flex-direction: column; gap: 0.5rem;">
+            <a href="https://www.instagram.com/explore/tags/brandsecrets/" target="_blank" rel="noopener noreferrer" class="btn-trend-link">
+              📱 #brandsecrets on Instagram
+            </a>
+            <a href="https://www.instagram.com/explore/tags/psychologyfacts/" target="_blank" rel="noopener noreferrer" class="btn-trend-link">
+              📱 #psychologyfacts on Instagram
+            </a>
+            <a href="https://www.instagram.com/explore/tags/businesstips/" target="_blank" rel="noopener noreferrer" class="btn-trend-link">
+              📱 #businesstips on Instagram
+            </a>
+          </div>
+        </div>
+
+        <div class="trend-query-card">
+          <h4>🤖 Autonomous Agentic Sync (Architecture)</h4>
+          <p>How to make this website 100% self-updating without manual effort:</p>
+          <div style="font-size: 0.8rem; color: var(--text-muted); line-height: 1.45; background: var(--bg-secondary); padding: 0.75rem; border-radius: 8px;">
+            1. <strong>Scheduler:</strong> Set up a free GitHub Action cron job running every 12 hours.<br>
+            2. <strong>Scraper:</strong> Fetch Google Trends RSS + top Reddit business discussions.<br>
+            3. <strong>Synthesizer:</strong> Pass the top story to Gemini API to generate the 3-act script &amp; hook.<br>
+            4. <strong>Auto-Commit:</strong> Push the new JSON directly to your hosted site.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- DIRECTORY / BROWSE ALL VIEW -->
+    <div id="directoryView" class="directory-section">
+      <div class="directory-header">
+        <div class="search-box">
+          <span class="search-icon">🔍</span>
+          <input type="text" id="dirSearchInput" class="search-input" placeholder="Search topics, hooks, companies, or concepts..." />
+        </div>
+        <div class="stats-counter">
+          Showing <strong id="dirResultsCount">0</strong> topics
+        </div>
+      </div>
+      <div class="grid-container" id="directoryGrid"></div>
+    </div>
+  </main>
+
+  <!-- CANVA REEL TEMPLATE STUDIO MODAL -->
+  <div id="canvaModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>🎬 Canva Reel Template Studio</h2>
+        <button id="closeCanvaModalBtn" class="btn-icon">✕</button>
+      </div>
+      <div class="modal-body">
+        <div class="canva-studio-grid">
+          <!-- 9:16 Mockup Preview -->
+          <div class="phone-mockup-wrapper">
+            <div class="phone-mockup">
+              <div class="phone-notch"></div>
+              <div class="mockup-user-video-slot">
+                <span>📹</span>
+                <p>DROP YOUR VIDEO HERE<br>(1080 x 1920 Vertical)</p>
+              </div>
+              <div class="mockup-overlays">
+                <div id="mockupAudioTag" class="mockup-audio-tag">🎵 Tension Synth Beat</div>
+                <div id="mockupHookCard" class="mockup-hook-card">HOOK TEXT POPUP</div>
+                <div id="mockupKeywordPill" class="mockup-keyword-pill">KEYWORD POP-UP CUE</div>
+              </div>
+            </div>
+            <span style="font-size: 0.75rem; color: var(--text-dim); font-weight: 600;">9:16 Reel Layout Preview</span>
+          </div>
+
+          <!-- Canva Cue Sheet & Direct Launch -->
+          <div class="canva-timeline-wrapper">
+            <h4 id="canvaStudioTitle">Topic Title</h4>
+            <p class="desc">
+              Here is your exact kinetic text edit list and sound design cue sheet. Just upload your video into Canva and paste these keyword pop-ups:
+            </p>
+
+            <!-- Launch to Canva Button -->
+            <div style="margin-bottom: 1.25rem;">
+              <a id="directCanvaLink" href="https://www.canva.com/create/instagram-reels/" target="_blank" rel="noopener noreferrer" class="btn-roll" style="text-decoration: none; display: inline-flex; justify-content: center; width: 100%; font-size: 0.95rem; padding: 0.75rem;">
+                🚀 Open 9:16 Video Editor in Canva
+              </a>
+            </div>
+
+            <!-- Cue Table -->
+            <table class="cue-table">
+              <thead>
+                <tr>
+                  <th>Timestamp</th>
+                  <th>On-Screen Kinetic Text</th>
+                  <th>Sound Effect</th>
+                  <th>Visual Effect</th>
+                </tr>
+              </thead>
+              <tbody id="canvaCueTableBody"></tbody>
+            </table>
+
+            <!-- Audio & 3-Step Guide -->
+            <div style="background: var(--bg-secondary); padding: 0.85rem; border-radius: 10px; margin-bottom: 1rem;">
+              <strong style="font-size: 0.82rem; color: var(--text-main);">🎵 Suggested Canva Audio Track Style:</strong>
+              <div id="canvaAudioVibeText" style="font-size: 0.82rem; color: var(--accent-emerald); font-weight: 700; margin-top: 0.2rem;">
+                Tension Synthwave / Lo-Fi Beat
+              </div>
+            </div>
+
+            <div class="steps-mini-deck">
+              <div class="step-mini-card">
+                <strong>1. Open Canva</strong>
+                Click the button above to launch a blank 9:16 vertical video project.
+              </div>
+              <div class="step-mini-card">
+                <strong>2. Upload Video</strong>
+                Drop your selfie/talking video into the background canvas layer.
+              </div>
+              <div class="step-mini-card">
+                <strong>3. Add Pop-ups</strong>
+                Copy the text from the cue sheet, add Canva's "Pop" or "Typewriter" animation, and drop the sound effects!
+              </div>
+            </div>
+
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="copyCueSheetBtn" class="btn-secondary">📋 Copy Cue Sheet</button>
+        <button id="closeCanvaModalBtn2" class="btn-secondary">Done</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- HOW TO HOST THIS WEBSITE MODAL -->
+  <div id="hostModal" class="modal-overlay">
+    <div class="modal-card" style="max-width: 600px;">
+      <div class="modal-header">
+        <h2>🌐 How to Host This Website (100% Free)</h2>
+        <button id="closeHostModalBtn" class="btn-icon">✕</button>
+      </div>
+      <div class="modal-body" style="font-size: 0.88rem; line-height: 1.55; color: var(--text-muted);">
+        <p style="margin-bottom: 1rem;">
+          This web application is built as a self-contained, standalone single-file HTML app. You can host it on the internet for free in under 60 seconds using any of these services:
+        </p>
+
+        <div style="display: flex; flex-direction: column; gap: 1rem;">
+          <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--text-main); font-size: 0.95rem;">Method 1: Netlify Drop (Fastest — 10 Seconds)</strong>
+            <p style="margin-top: 0.35rem;">
+              1. Rename this file to <code>index.html</code>.<br>
+              2. Go to <a href="https://app.netlify.com/drop" target="_blank" rel="noopener noreferrer" style="color: var(--primary);">app.netlify.com/drop</a>.<br>
+              3. Drag and drop the folder containing <code>index.html</code>.<br>
+              4. You get an instant public HTTPS link (e.g., <code>your-site.netlify.app</code>).
+            </p>
+          </div>
+
+          <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--text-main); font-size: 0.95rem;">Method 2: GitHub Pages (Permanent &amp; Free Custom Domain)</strong>
+            <p style="margin-top: 0.35rem;">
+              1. Create a free repository on GitHub (e.g. <code>reel-generator</code>).<br>
+              2. Upload this file as <code>index.html</code>.<br>
+              3. Go to <strong>Settings → Pages</strong>, choose <strong>Branch: main / root</strong> and click Save.<br>
+              4. Your site will be live at <code>https://yourusername.github.io/reel-generator/</code>.
+            </p>
+          </div>
+
+          <div style="background: var(--bg-secondary); padding: 1rem; border-radius: 12px; border: 1px solid var(--border-subtle);">
+            <strong style="color: var(--text-main); font-size: 0.95rem;">Method 3: Vercel / Cloudflare Pages</strong>
+            <p style="margin-top: 0.35rem;">
+              Import the GitHub repo into Vercel or Cloudflare Pages for instant worldwide edge deployment with zero configuration.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="closeHostModalBtn2" class="btn-roll" style="font-size: 0.85rem; padding: 0.5rem 1.25rem;">Got it!</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- SAVED QUEUE MODAL -->
+  <div id="queueModal" class="modal-overlay">
+    <div class="modal-card">
+      <div class="modal-header">
+        <h2>⭐ Your Saved Reel Queue</h2>
+        <button id="closeQueueBtn" class="btn-icon">✕</button>
+      </div>
+      <div class="modal-body">
+        <div id="savedListContainer" class="saved-list"></div>
+        <div id="emptyQueueState" style="display: none; text-align: center; padding: 3rem 1rem; color: var(--text-dim);">
+          <span style="font-size: 2.5rem;">📭</span>
+          <p>Your queue is empty! Star any topic to save it for your filming batch.</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button id="clearQueueBtn" class="btn-secondary">Clear All</button>
+        <button id="exportMarkdownBtn" class="btn-roll" style="padding: 0.55rem 1.25rem; font-size: 0.85rem;">
+          📥 Export to Markdown
+        </button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast">
+    <span id="toastIcon">📋</span>
+    <span id="toastMsg">Copied to clipboard!</span>
+  </div>
+
+  <!-- Footer -->
+  <footer>
+    <p>ReelRoulette &bull; Designed for short-form video creators researching high-retention topics.</p>
+    <p style="margin-top: 0.35rem; color: var(--text-dim);">
+      All topics grounded in verifiable business history, behavioral economics &amp; cognitive psychology.
+    </p>
+  </footer>
+
+  <script>
+    // Embedded enriched topic dataset
+    const TOPICS_DATA = [{"id": "brand-red-bull-trash", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Red Bull's Fake Trash Stunt", "subtitle": "How empty garbage cans manufactured artificial social proof", "difficulty": "Quick Explainer", "vibe": "Street Smart Hustle", "viralTrigger": "Deceptive Marketing & Social Proof", "hook": "In the 1980s, Red Bull was failing. Nobody wanted to drink an expensive soda that tasted like cough syrup. So they pulled off one of the dirtiest marketing stunts in history.", "hookAlt": "Did you know Red Bull became a $10B empire by literally filling London dumpsters with trash?", "summary": "Instead of spending millions on billboards, Red Bull paid students to fill nightclub trash cans, sidewalks, and bar dumpsters with empty crushed cans. When partygoers woke up, they assumed everyone was drinking Red Bull.", "breakdown": [{"label": "The Dilemma", "text": "Red Bull tasted medicinal, cost twice as much as Coca-Cola, and had zero brand awareness in the UK."}, {"label": "The Hack", "text": "They crushed empty cans and scattered them around London clubs, bar entrances, and college dumpsters. Bartenders were given free crates so empty cans sat conspicuously on counters."}, {"label": "The Psychology", "text": "Manufactured Social Proof. When people see discarded cans everywhere, their brain assumes: 'Everyone is drinking this, so it must be amazing.'"}], "scriptBlueprint": {"hook": "Ever wonder how Red Bull convinced the world to pay $4 for a drink that tastes like liquid cough medicine?", "body": "When Dietrich Mateschitz brought Red Bull to the UK, traditional distributors laughed him out of the room. He didn't have the budget to fight Pepsi or Coke. So he did something crazy: he bought thousands of empty cans, crushed them, and literally dumped them into trash bins outside the trendiest nightclubs and college bars. When people walked out at 3 AM, every single garbage can was overflowing with Red Bull. People thought, 'What the hell is everyone drinking?' Demand exploded overnight without a single TV commercial.", "cta": "Was this genius guerilla marketing or straight-up manipulation? Drop your thoughts below."}, "creatorTip": "Use fast pacing and show a B-roll of energy drinks or crushed cans. Viewers love 'anti-advertising' underdog stories.", "researchQueries": ["Red Bull empty cans London marketing stunt history", "Dietrich Mateschitz guerilla marketing strategy case study", "manufactured social proof in consumer brands"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Suspenseful Synthwave / Cyberpunk Underdog Beat", "canvaSearchQuery": "instagram reels kinetic typography grunge", "popups": [{"time": "0:00 - 0:03", "text": "THE DIRTIEST TRICK IN MARKETING", "sfx": "\ud83d\udca5 Sub Bass Hit", "effect": "Bounce In / Yellow Glow", "action": "Hook viewer with crushed can visual"}, {"time": "0:05 - 0:09", "text": "FAILED LAUNCH: 1980s", "sfx": "\ud83d\udca8 Quick Whoosh", "effect": "Typewriter / Red Accent", "action": "Highlight lack of sales & medicinal taste"}, {"time": "0:12 - 0:18", "text": "DUMPSTER SECRET \ud83d\uddd1\ufe0f", "sfx": "\ud83d\udd14 Ding / Glitch", "effect": "Pop Up / Giant Impact font", "action": "Reveal empty crushed cans in nightclub bins"}, {"time": "0:22 - 0:28", "text": "MANUFACTURED SOCIAL PROOF", "sfx": "\u26a1 Electric Zap", "effect": "Neon Border Highlight", "action": "Explain the psychological mechanism"}, {"time": "0:32 - 0:40", "text": "GENIUS OR SCAM? \ud83d\udc47", "sfx": "\u2728 Riser & Chime", "effect": "Slide Up Call-to-Action", "action": "Prompt comments to drive algorithm boost"}]}}, {"id": "brand-rolex-nonprofit", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Rolex is Technically a Non-Profit Charity", "subtitle": "The ultra-luxury watchmaker that pays $0 in corporate tax", "difficulty": "Mind Bender", "vibe": "Tax Loophole / Mystery", "viralTrigger": "Cognitive Dissonance (Luxury vs Charity)", "hook": "The ultimate symbol of billionaire wealth and flex culture isn't a corporation at all. Rolex is legally registered as a charitable non-profit.", "hookAlt": "What if I told you the company selling $50,000 diamond watches pays zero corporate income taxes?", "summary": "Rolex is 100% owned by the Hans Wilsdorf Foundation, a Swiss charitable trust. Because it has no public shareholders and is classified as a foundation, its profits fund education, social welfare, and watchmaking scholarships.", "breakdown": [{"label": "The Origin", "text": "Founder Hans Wilsdorf lost his wife in 1944. Having no heirs, he transferred 100% of his Rolex shares to a private trust named after himself."}, {"label": "The Tax Structure", "text": "Under Swiss law, the foundation pays no corporate income tax on Rolex's estimated $10B+ annual revenue. Financials are completely private."}, {"label": "The Irony", "text": "Rappers and Wall Street bankers flex Rolexes to signal extreme capitalism, but they're technically funding Swiss philanthropic programs."}], "scriptBlueprint": {"hook": "Next time someone flexes a Rolex on Instagram, tell them they just made a massive charitable donation.", "body": "Rolex isn't owned by LVMH, Swatch, or any billionaire hedge fund. In 1944, after founder Hans Wilsdorf's wife tragically died, he had no children to inherit the company. So he transferred 100% of Rolex's shares into the Hans Wilsdorf Foundation\u2014a private Swiss charitable trust. Because it's a foundation, Rolex doesn't answer to Wall Street shareholders, doesn't publish annual financial reports, and pays zero corporate income tax in Geneva. A huge chunk of their multi-billion dollar profits quietly funds schools, arts, and charities.", "cta": "Would you buy a Rolex knowing its profits go to charity rather than corporate shareholders?"}, "creatorTip": "Wear or show a watch up close in the first frame. The contrast between 'super luxury status symbol' and 'tax-exempt charity' hooks viewers instantly.", "researchQueries": ["Hans Wilsdorf Foundation Rolex ownership structure", "Why Rolex is a non-profit foundation Swiss law", "Rolex secret financial disclosure and charity donations"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Luxury Lo-Fi / Cinematic Deep Bass Groove", "canvaSearchQuery": "luxury reel template minimal modern", "popups": [{"time": "0:00 - 0:03", "text": "$50,000 WATCH = $0 TAX?", "sfx": "\ud83d\udca5 Cash Register Ding", "effect": "Gold Shimmer / Bold Impact", "action": "Show luxury watch close-up"}, {"time": "0:06 - 0:11", "text": "ZERO SHAREHOLDERS \ud83d\udeab", "sfx": "\ud83d\udca8 Deep Whoosh", "effect": "Strikethrough / Red Alert", "action": "Explain Hans Wilsdorf Foundation"}, {"time": "0:15 - 0:22", "text": "LEGAL CHARITABLE TRUST", "sfx": "\ud83d\udd14 Bell Toll", "effect": "Classic Elegant Serif Float", "action": "Reveal 100% ownership structure"}, {"time": "0:25 - 0:32", "text": "FLEX CULTURE PARADOX", "sfx": "\u26a1 Sub Drop", "effect": "Zoom In / Accent Highlight", "action": "Contrast rappers vs Swiss charity schools"}, {"time": "0:35 - 0:42", "text": "WOULD YOU BUY ONE? \ud83d\udc47", "sfx": "\u2728 Glass Chime", "effect": "Pulsing Comment Box", "action": "Ask question to drive debate in replies"}]}}, {"id": "brand-costco-hot-dog", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "The $1.50 Costco Hot Dog Death Threat", "subtitle": "Why the hot dog price hasn't changed since 1985", "difficulty": "Quick Explainer", "vibe": "Dramatic Corporate Feud", "viralTrigger": "Extreme Corporate Principles & Relatability", "hook": "When the CEO of Costco told the founder they were losing millions on their $1.50 hot dog combo, the founder looked him in the eye and said: 'If you raise that f***ing hot dog, I will kill you.'", "hookAlt": "Inflation has destroyed everything since 1985, except for one sacred item: the Costco hot dog.", "summary": "Costco sells over 150 million hot dog combos a year at $1.50. When rising meat costs threatened profitability, Costco refused to hike prices and instead built their own meat processing plants to cut costs.", "breakdown": [{"label": "The Showdown", "text": "CEO Craig Jelinek approached co-founder Jim Sinegal in 2008, warning that rising supplier prices were turning the food court into a cash furnace."}, {"label": "The Founder's Ultimatum", "text": "Sinegal refused to compromise on customer trust. His solution: 'Figure it out. Build our own manufacturing plant if you have to.'"}, {"label": "The Masterplan", "text": "Costco built its own hot dog manufacturing facility in Tracy, California, slashing production costs and preserving the $1.50 price tag forever."}], "scriptBlueprint": {"hook": "Costco's founder once threatened to murder his own CEO over a $1.50 hot dog. Here's why that threat built an empire.", "body": "In 2008, Costco was bleeding money on its famous $1.50 hot dog combo. The new CEO went to founder Jim Sinegal and said, 'Jim, we have to raise the price to $2.00, we're losing our shirts.' Sinegal replied: 'If you raise the effing hot dog, I will kill you. Figure it out.' So what did the CEO do? He didn't raise the price. Instead, Costco fired Hebrew National, bought their own meat processing plant in California, and manufactured the hot dogs themselves. Why? Because the $1.50 hot dog is a loss leader that guarantees customer loyalty for their $60/year membership.", "cta": "Is Costco's hot dog the greatest customer loyalty hack of all time?"}, "creatorTip": "Great for talking directly to the camera with high energy. Contrast the absurdity of a death threat with sound business economics.", "researchQueries": ["Jim Sinegal Costco hot dog quote Craig Jelinek", "Costco loss leader hot dog meat processing plant", "Costco membership business model vs grocery margin"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Upbeat Comedy Funk / Fast Talking Groovy Bass", "canvaSearchQuery": "bold caption reel retail food", "popups": [{"time": "0:00 - 0:03", "text": "'I WILL KILL YOU' \ud83d\udc80", "sfx": "\ud83d\udca5 Dramatic Record Scratch", "effect": "Glitch Shake / Bold White", "action": "Hit viewer with founder's quote immediately"}, {"time": "0:05 - 0:10", "text": "THE $1.50 HOT DOG WAR", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Red & Mustard Yellow Badge", "action": "Show Costco food court inflation contrast"}, {"time": "0:14 - 0:20", "text": "BUILT THEIR OWN FACTORY \ud83c\udfed", "sfx": "\ud83d\udd28 Heavy Thud", "effect": "Slide In From Left", "action": "Explain firing suppliers & building plants"}, {"time": "0:24 - 0:30", "text": "SACRED LOSS LEADER", "sfx": "\ud83d\udcb0 Coin Jingle", "effect": "Green Dollar Glow", "action": "Explain membership retention economics"}, {"time": "0:34 - 0:42", "text": "BEST DEAL IN AMERICA? \ud83d\udc47", "sfx": "\u2728 Sparkle Chime", "effect": "Bouncing Question Card", "action": "Ask viewer their favorite food court item"}]}}, {"id": "brand-bionicle-lego", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "The Dark Fantasy Line That Saved Lego from Bankruptcy", "subtitle": "How Bionicle pulled Lego back from $800M in debt", "difficulty": "Deep Rabbit Hole", "vibe": "Nostalgia & Underdog Survival", "viralTrigger": "Childhood Nostalgia & High-Stakes Turnaround", "hook": "In 2003, Lego was literally two weeks away from bankruptcy and $800 million in debt. The toy that saved the entire company wasn't Star Wars\u2014it was Bionicle.", "hookAlt": "Lego almost went out of business in the early 2000s, until a tiny team secretly broke all company rules.", "summary": "In the late 90s, Lego diversified into video games, clothing, and theme parks, hemorrhaging cash. A small renegade team developed Bionicle\u2014a gritty, biomechanical mythological universe that became a cultural juggernaut.", "breakdown": [{"label": "The Collapse", "text": "Lego over-complicated their sets with 12,000+ unique plastic molds. Sales crashed 30% in 2003 and banks threatened to foreclose."}, {"label": "The Secret Weapon", "text": "Bionicle combined low-cost ball-and-socket molds with comic books, video games, and deep Polynesian-inspired lore."}, {"label": "The Miracle", "text": "Bionicle generated over 25% of Lego's total annual revenue in its first years, funding their entire corporate turnaround."}], "scriptBlueprint": {"hook": "Lego was weeks away from closing down forever in 2003. Here's the crazy story of how plastic cyborgs saved them.", "body": "In the late 90s, Lego lost its mind. They built theme parks, licensed TV shows, and ballooned to over 12,000 unique plastic brick molds. By 2003, they were $800 million in debt and losing $1 million every single day. Out of desperation, they greenlit a bizarre, high-risk project called Bionicle\u2014biomechanical heroes with masks and complex tribal lore. Purists inside Lego hated it because it didn't look like classic Lego. But kids went wild. Bionicle single-handedly generated $150M+ in profits, kept the factories running, and bought Lego enough time to fix their balance sheet.", "cta": "Did you collect Bionicles as a kid? Drop your favorite Toa in the comments!"}, "creatorTip": "Show pictures of classic 2001 Bionicle canister packaging. High nostalgia value triggers massive comment section engagement.", "researchQueries": ["Lego near bankruptcy 2003 Bionicle case study", "How Bionicle saved Lego from insolvency", "Jorgen Vig Knudstorp Lego turnaround strategy"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE DARK FANTASY LINE THAT SAVED LEGO FROM BANKRUPTCY", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-xerox-parc", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Xerox Invented Modern Computing & Handed It to Apple", "subtitle": "The billion-dollar blunder of Xerox PARC", "difficulty": "Mind Bender", "vibe": "Tragic Corporate Blindness", "viralTrigger": "Silicon Valley Lore & Tragic Irony", "hook": "In 1979, Xerox had already invented the computer mouse, graphical windows, ethernet, and laser printing. Then they invited 24-year-old Steve Jobs into their secret lab.", "hookAlt": "Imagine inventing the entire modern digital world, and then handing it to your rival for pocket change.", "summary": "Xerox PARC engineers created the graphical user interface (GUI) and computer mouse. Xerox executives in New York saw themselves only as a copier company, completely ignoring the breakthrough until Steve Jobs licensed it for $1M in pre-IPO Apple stock.", "breakdown": [{"label": "The Lab", "text": "Xerox funded PARC in Palo Alto to invent the 'paperless office'. Their Xerox Alto had a mouse, desktop icons, and word processing in 1973."}, {"label": "The Blindness", "text": "Xerox executives in New York were copier salesmen who couldn't comprehend software. They refused to commercialize it."}, {"label": "The Heist", "text": "Jobs traded 100,000 shares of Apple pre-IPO stock for a 3-day demo. Apple immediately refined the GUI into the Macintosh."}], "scriptBlueprint": {"hook": "Steve Jobs didn't invent the computer mouse or desktop icons. A copier company did, and they gave it away for almost nothing.", "body": "In 1979, 24-year-old Steve Jobs walked into Xerox's Palo Alto research lab. Xerox engineers had invented something miraculous: a screen with clickable icons, folders, overlapping windows, and a little device on a ball called a 'mouse'. At the time, computers were just green command-line text. Jobs was stunned. He asked the engineers, 'Why aren't you selling this?!' The engineers sighed. Xerox executives in New York thought computers were a distraction from their copier business. Jobs licensed the technology for just 100,000 Apple shares, hired Xerox's top engineers, and launched the Macintosh.", "cta": "Was Xerox's board the most incompetent executive team in tech history?"}, "creatorTip": "Highlight the contrast between old command-line computers and the GUI. Ask viewers to comment on what Xerox could have been worth.", "researchQueries": ["Steve Jobs visit to Xerox PARC 1979 history", "Xerox Alto GUI mouse invention Steve Jobs Apple", "Innovator's Dilemma Xerox PARC corporate failure"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "XEROX INVENTED MODERN COMPUTING & HANDED IT TO APPLE", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-tiffany-blue", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Why Tiffany Blue is Legally Trademarked (PMS 1837)", "subtitle": "The color that no paint store on Earth is allowed to sell", "difficulty": "Quick Explainer", "vibe": "Luxury Legal Power", "viralTrigger": "Color Psychology & Trademark Absurdity", "hook": "There is a specific shade of robin's egg blue that you cannot legally paint your bedroom with. If you try to sell anything in this color, you can get sued into oblivion.", "hookAlt": "Can a company actually own a color? Meet Pantone 1837.", "summary": "Tiffany Blue (Pantone 1837, named after Tiffany's founding year) is a proprietary color protected under trademark law. It does not appear in standard Pantone swatch books and cannot be commercially reproduced.", "breakdown": [{"label": "The Origin", "text": "Chosen in 1845 by Charles Lewis Tiffany for the cover of the first 'Blue Book' mail-order catalog."}, {"label": "The Trademark", "text": "Protected under the Lanham Act. The color has acquired 'secondary meaning'\u2014seeing the turquoise box instantly triggers the thought of Tiffany diamonds."}, {"label": "The Mystery", "text": "Pantone does not publish PMS 1837 in public books. The color formulation is kept strictly confidential."}], "scriptBlueprint": {"hook": "Did you know it is technically illegal to sell a jewelry box in this exact shade of blue?", "body": "This is Pantone 1837\u2014better known as Tiffany Blue. It was chosen in 1845 by founder Charles Lewis Tiffany because turquoise was the gemstone favored by Victorian brides. But here's the crazy part: Tiffany didn't just trademark the name 'Tiffany'\u2014they trademarked the literal hex code of the color. Under US trademark law, the color has 'secondary meaning', meaning when any human sees that blue box, their brain immediately thinks of luxury diamonds. Pantone keeps the ink recipe in a locked vault, and no competitor is allowed to use it.", "cta": "Do you think corporations should be allowed to own colors?"}, "creatorTip": "Use a turquoise background color or hold a small box to trigger immediate visual curiosity.", "researchQueries": ["Tiffany blue trademark Pantone 1837 legal case", "Can a company trademark a color Lanham act", "Tiffany Blue Book 1845 history Charles Lewis Tiffany"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "WHY TIFFANY BLUE IS LEGALLY TRADEMARKED (PMS 1837)", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-marlboro-man", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Marlboro's 3,000% Pivot: From Women's Cigarette to Rugged Cowboy", "subtitle": "The most aggressive rebrand in advertising history", "difficulty": "Quick Explainer", "vibe": "Advertising Genius / Dark Arts", "viralTrigger": "Contrarian Brand Reversals", "hook": "In the 1920s, Marlboro was marketed with the slogan 'Mild as May' exclusively to wealthy women. 30 years later, it became the symbol of rugged alpha masculinity.", "hookAlt": "How an ad agency took a failing lipstick cigarette and turned it into the best-selling brand on Earth.", "summary": "Originally designed for women with a red filter tip to hide lipstick smudges, Marlboro struggled with low sales. In 1954, ad legend Leo Burnett introduced the rugged Marlboro Man cowboy, boosting sales by 3,241% in a single year.", "breakdown": [{"label": "The Original Pitch", "text": "Marlboro was advertised as a refined, feminine cigarette. Men refused to buy it because filtered cigarettes were considered 'unmanly'."}, {"label": "The Shift", "text": "When early cancer research emerged in the 1950s, men wanted filters but were embarrassed. Burnett created the tattoo-wearing cowboy to make filters look masculine."}, {"label": "The Result", "text": "Within months of the campaign, Marlboro went from 1% market share to the top-selling cigarette worldwide."}], "scriptBlueprint": {"hook": "The biggest symbol of tough American masculinity was originally invented to hide women's lipstick stains.", "body": "In 1924, Marlboro launched as a luxury ladies' cigarette with the slogan 'Mild as May'. They even dyed the filter red so women wouldn't leave lipstick stains on the paper. For decades, men refused to smoke Marlboro because filtered cigarettes were mocked as weak. But in the 1950s, new health reports linked smoking to lung cancer, and men suddenly wanted filters. Philip Morris hired advertising genius Leo Burnett. Instead of talking about health or filters, Burnett put a rugged, weathered cowboy on horseback in the Utah desert. Sales skyrocketed over 3,000% in twelve months.", "cta": "Is this the greatest rebrand in history, or the most lethal?"}, "creatorTip": "Emphasize the before-and-after contrast: show the delicate 1920s ad followed by the iconic cowboy.", "researchQueries": ["Marlboro Mild as May red filter lipstick history", "Leo Burnett Marlboro Man campaign case study 1954", "Marlboro filtered cigarette rebranding 3000 percent sales increase"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "MARLBORO'S 3,000% PIVOT: FROM WOMEN'S CIGARETTE TO RUGGED COWBOY", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-mcdonalds-real-estate", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "McDonald's is a Real Estate Firm, Not a Burger Chain", "subtitle": "The secret balance sheet behind the golden arches", "difficulty": "Mind Bender", "vibe": "Financial Revelation", "viralTrigger": "Business Model Revelation", "hook": "McDonald's doesn't make its billions selling burgers and french fries. They are quietly one of the largest real estate landlords on planet Earth.", "hookAlt": "Ray Kroc once asked a room of Harvard MBA students: 'What business do you think I'm in?' Nobody got it right.", "summary": "Harry Sonneborn cracked the McDonald's code in 1956: instead of taking small royalties on food, McDonald's buys the underlying land and leases it back to franchisees at an aggressive markup.", "breakdown": [{"label": "The Trap", "text": "In the early days, Ray Kroc made tiny margins licensing the kitchen system. He was swimming in debt while franchisees got rich."}, {"label": "The Sonneborn Model", "text": "Finance wizard Harry Sonneborn told Kroc: 'You're not in the burger business. You're in real estate. The only reason you sell burgers is because they pay rent.'"}, {"label": "The Scale", "text": "McDonald's owns over $40 billion in prime corner-lot commercial real estate worldwide, collecting recession-proof lease payments regardless of burger sales."}], "scriptBlueprint": {"hook": "Ray Kroc once asked a class of MBA students: 'What business is McDonald's in?' Everyone said hamburgers. He smiled and said: 'I'm in real estate.'", "body": "Most people think McDonald's makes money flipping patties. But if you look at their financial statements, food sales are just the bait. In 1956, McDonald's created the Franchise Realty Corporation. Here's how it works: McDonald's buys the prime corner-lot land where every restaurant sits. Then they force the franchisee to pay them fixed rent PLUS a percentage of gross sales. Even if burger sales tank, the franchisee still has to pay McDonald's rent or lose their restaurant. Today, McDonald's owns over $40 billion in global real estate, making them one of the wealthiest landlords on Earth.", "cta": "Did you already know this, or did this just melt your brain?"}, "creatorTip": "Great whiteboard or visual concept. Break down the math simply in under 45 seconds.", "researchQueries": ["Harry Sonneborn McDonald's real estate business model", "Ray Kroc Harvard business school speech real estate", "McDonald's balance sheet real estate assets vs franchise revenue"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "MCDONALD'S IS A REAL ESTATE FIRM, NOT A BURGER CHAIN", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-ferrari-blacklist", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Ferrari's Secret Celebrity Blacklist", "subtitle": "Why multi-millionaires are forbidden from buying new Ferraris", "difficulty": "Quick Explainer", "vibe": "Exclusive & Petty Drama", "viralTrigger": "Celebrity Drama & Luxury Snobbery", "hook": "Justin Bieber, deadmau5, Kim Kardashian, and 50 Cent have hundreds of millions of dollars, but they are all permanently banned from buying a brand new Ferrari.", "hookAlt": "Having $100M doesn't mean you can buy whatever you want. Welcome to the Ferrari blacklist.", "summary": "Ferrari protects its brand prestige with totalitarian contracts. Modifying logos, wrapping cars in unauthorized colors, or auctioning special editions for quick flips lands you on Maranello's strict blacklist.", "breakdown": [{"label": "The deadmau5 Incident", "text": "DJ deadmau5 wrapped his 458 Italia in a sky-blue Nyan Cat wrap and replaced the badges with 'Purrari'. Ferrari sent a cease-and-desist letter claiming trademark infringement."}, {"label": "The Code of Conduct", "text": "When you buy an elite Ferrari, you sign an agreement: no unauthorized engine modifications, no altering the prancing horse badge, and Ferrari gets right of first refusal if you sell."}, {"label": "Brand Protection", "text": "By dictating who can buy, Ferrari manufactures unmatched exclusivity\u2014making their cars an asset class rather than just vehicles."}], "scriptBlueprint": {"hook": "If you have $500,000 in cash right now, you still can't walk into a dealership and buy a new Ferrari. Here's why.", "body": "Ferrari doesn't care how rich you are. In fact, they have a secret blacklist of billionaires and celebrities who are banned from ordering new cars. DJ deadmau5 famously wrapped his 458 in a blue Nyan Cat wrap and changed the badge to say 'Purrari'. Ferrari's lawyers slapped him with a cease-and-desist. Justin Bieber parked his neon blue Ferrari 458 and forgot where he left it for three weeks, then auctioned it without Ferrari's permission. Blacklisted. When you buy a limited edition Ferrari, you sign a contract giving Ferrari the right to approve how you paint, modify, or resell it.", "cta": "Is Ferrari protecting their brand heritage, or are they being ridiculous?"}, "creatorTip": "Show images of the 'Purrari' or Bieber's custom car. Highly visual with instant pop-culture recognition.", "researchQueries": ["Ferrari celebrity blacklist Justin Bieber deadmau5 Purrari", "Ferrari trademark cease and desist custom wraps", "Ferrari right of first refusal ownership agreement"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "FERRARI'S SECRET CELEBRITY BLACKLIST", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-de-beers-diamonds", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "The De Beers Diamond Cartel: 'A Diamond is Forever'", "subtitle": "How one agency convinced the world that carbon rocks equal love", "difficulty": "Mind Bender", "vibe": "Mass Psychological Manipulation", "viralTrigger": "Debunking Societal Norms", "hook": "Before 1938, almost nobody proposed with a diamond engagement ring. Then one ad agency ran the most successful psychological scam in history.", "hookAlt": "Why did we all agree that a man must spend two months' salary on a rock with virtually zero resale value?", "summary": "Facing massive surplus and dropping diamond prices, De Beers hired N.W. Ayer in 1938. Copywriter Frances Gerety coined 'A Diamond is Forever', linking diamond rings to eternal romance so people would never sell them back to the market.", "breakdown": [{"label": "The Problem", "text": "Massive diamond mines were discovered in South Africa. Diamonds were abundant, and prices were crashing."}, {"label": "The Monopolistic Cartel", "text": "De Beers hoarded stockpiles in London vaults to artificially restrict supply and manufacture fake rarity."}, {"label": "The 'Forever' Trap", "text": "If people sold their rings during recessions, the second-hand market would crash prices. So De Beers framed selling a diamond as an insult to eternal love."}], "scriptBlueprint": {"hook": "The two-month salary rule for engagement rings wasn't an ancient tradition. It was an advertising campaign from 1938.", "body": "In the 1930s, diamonds weren't rare. Massive mines in South Africa flooded the market, and prices collapsed. De Beers had a monopoly, but nobody was buying. So they hired ad agency N.W. Ayer with a mission: convince men that the size of a diamond directly measures how much they love their fianc\u00e9. Copywriter Frances Gerety wrote the legendary line: 'A Diamond is Forever'. Why 'Forever'? Because if people thought diamonds lasted forever, they would never sell them, preventing a second-hand market from crashing De Beers' cartel prices. Within three decades, diamond engagement rings went from 10% of brides to over 80%.", "cta": "Would you prefer a real diamond or a lab-grown diamond with the money saved invested?"}, "creatorTip": "Start with a close-up shot of a ring. High emotional stakes because engagement rings affect almost every adult viewer.", "researchQueries": ["De Beers N.W. Ayer 1938 advertising campaign history", "Frances Gerety A Diamond is Forever slogan origin", "Edward Jay Epstein The Diamond Invention Atlantic Monthly"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE DE BEERS DIAMOND CARTEL: 'A DIAMOND IS FOREVER'", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-nintendo-yakuza", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Nintendo's 1889 Yakuza Gambling Roots", "subtitle": "Before Mario and Pok\u00e9mon, Nintendo supplied the Japanese underworld", "difficulty": "Deep Rabbit Hole", "vibe": "Crime Lore / Company Origins", "viralTrigger": "Shocking Origin Story", "hook": "Nintendo didn't start in the 1980s making Donkey Kong. It was founded in 1889 as a supplier of illegal gambling cards to the Japanese Yakuza.", "hookAlt": "Did you know Mario and Pikachu were funded by 19th-century Japanese gang dens?", "summary": "Founded by Fusajiro Yamauchi in Kyoto in 1889, Nintendo made handcrafted 'Hanafuda' playing cards. When Japan banned gambling, Yakuza parlors became Yamauchi's biggest customers because gangsters used fresh decks for each game to prevent cheating.", "breakdown": [{"label": "The Prohibition", "text": "In 1633, Japan banned all Western playing cards to curb gambling. Underground parlors used disguised flower cards called Hanafuda."}, {"label": "The Big Client", "text": "Yakuza dens consumed dozens of fresh packs every night. Nintendo became the dominant supplier across Japan."}, {"label": "The Wild Pivots", "text": "Before video games, Nintendo ran taxi services, instant noodle brands, and hourly 'love hotels'."}], "scriptBlueprint": {"hook": "Mario, Zelda, and Pok\u00e9mon exist today because of the Japanese mafia in 1889. Here's Nintendo's wild secret history.", "body": "In 1889, a Kyoto craftsman named Fusajiro Yamauchi started a shop called Nintendo Koppai. He didn't make video games\u2014he made handmade Hanafuda playing cards painted on mulberry bark. At the time, gambling was strictly illegal in Japan, but underground Yakuza parlors ran high-stakes games every night. To prevent players from marking the cards, the Yakuza demanded a brand new, sealed deck for every single round. Nintendo became their primary supplier, raking in cash. Decades later, when card sales slumped, Nintendo tried opening taxi companies and even 'love hotels' before finally pivoting to toy electronics.", "cta": "What's the craziest company origin story you know? Let me know below."}, "creatorTip": "Show the original antique Hanafuda card art next to Mario. The contrast is unbelievable.", "researchQueries": ["Nintendo 1889 Fusajiro Yamauchi Hanafuda cards Yakuza", "Nintendo love hotels taxi company history Hiroshi Yamauchi", "David Sheff Game Over book Nintendo history"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "NINTENDO'S 1889 YAKUZA GAMBLING ROOTS", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "brand-subaru-queer-marketing", "category": "Brand Secrets", "categorySlug": "brand_secrets", "title": "Subaru's Coded 1990s Queer Advertising", "subtitle": "How niche demographics saved an automaker from extinction", "difficulty": "Mind Bender", "vibe": "Progressive Subversive Strategy", "viralTrigger": "Clever Marketing Codes & Hidden History", "hook": "In the 1990s, Subaru was about to pull out of the US market forever. Then they discovered a secret demographic that saved the company: lesbians.", "hookAlt": "How an automaker used hidden coded license plates to talk to an audience nobody else acknowledged.", "summary": "Subaru conducted customer research in the 90s and found lesbian couples were 4x more likely to buy their all-wheel-drive wagons. At a time when LGBTQ+ ads were controversial, Subaru ran brilliant double-entendre campaigns that only the target demographic noticed.", "breakdown": [{"label": "The Discovery", "text": "Subaru identified 5 key buyers: educators, healthcare workers, IT professionals, outdoor enthusiasts, and lesbians."}, {"label": "The Coded Ads", "text": "They put Easter eggs on car license plates like 'XENA LVR' (referencing Xena: Warrior Princess) and 'P-TOWN' (Provincetown, MA)."}, {"label": "The Payoff", "text": "The campaign built fierce, unbreakable brand loyalty, transforming Subaru into an outdoor cultural icon."}], "scriptBlueprint": {"hook": "In the 1990s, Subaru was bleeding money in America. Then their researchers discovered a secret that saved the entire company.", "body": "Subaru was trying to figure out who was actually buying their all-wheel-drive wagons. When they analyzed their customer data, they noticed something incredible: lesbian couples were purchasing Subarus at four times the national average. They loved that the cars were rugged, understated, and great for dogs and camping. But in the 1990s, openly targeting LGBTQ+ buyers risked massive boycotts. So Subaru hired ad agency Mulryan/Nash to create secret coded campaigns. They put license plates on the cars that said 'XENA LVR' and ran taglines like 'It's Not a Choice. It's the Way We're Built.' Straight audiences thought it meant the drivetrain, while queer audiences felt seen for the first time.", "cta": "Is this one of the most brilliant stealth marketing campaigns ever created?"}, "creatorTip": "Highlight the cleverness of the double-meaning copy. High appreciation for smart, inclusive business strategy.", "researchQueries": ["Subaru 1990s lesbian marketing campaign history NPR Planet Money", "Mulryan Nash Subaru ad campaign XENA LVR", "Subaru niche marketing demographic segmentation case study"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "SUBARU'S CODED 1990S QUEER ADVERTISING", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-poison-pill", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "The Poison Pill Defense", "subtitle": "The financial suicide tactic used to kill hostile takeovers", "difficulty": "Mind Bender", "vibe": "Wall Street Warfare", "viralTrigger": "Corporate Warfare & High-Stakes Chess", "hook": "In business warfare, when a corporate raider tries to take over your company against your will, you can swallow a 'poison pill' to make your company economically toxic.", "hookAlt": "What happens when a CEO would rather blow up their own stock than let a hostile billionaire buy them?", "summary": "Invented by takeover lawyer Martin Lipton in 1982, the Shareholder Rights Plan triggers if an unwanted bidder crosses an ownership threshold (e.g. 15%), granting every other shareholder the right to buy new shares at a steep discount to massively dilute the attacker.", "breakdown": [{"label": "The Hostile Raid", "text": "A corporate raider buys up shares on the open market, trying to acquire a controlling stake and fire management."}, {"label": "The Mechanism", "text": "The board activates the 'poison pill'. The moment the hostile buyer crosses 15%, all other shareholders get rights to buy new stock at half price."}, {"label": "The Result", "text": "The raider's ownership gets instantly diluted from 15% to 5%, destroying billions of dollars of their capital until acquiring the company becomes mathematically impossible."}], "scriptBlueprint": {"hook": "There is a legal tactic on Wall Street literally called the 'Poison Pill', and Elon Musk ran head-first into it when he tried to buy Twitter.", "body": "When a billionaire tries to launch a hostile takeover of a company, the board of directors has a nuclear button called a Poison Pill. Here is how it works: the board sets a trap rule. If any single person acquires more than 15% of the company without board approval, a financial bomb goes off. Every other shareholder in the world suddenly gets the right to buy brand new shares at a 50% discount\u2014except the hostile bidder. This instantly floods the market with millions of new shares, diluting the hostile bidder's stake into dust and making the takeover mathematically impossible.", "cta": "Is the poison pill a brilliant defense of shareholders, or just a way for CEOs to protect their jobs?"}, "creatorTip": "Mention the Elon Musk vs Twitter board 2022 saga to give it instant modern relevance.", "researchQueries": ["Poison Pill shareholder rights plan Martin Lipton 1982", "Twitter board poison pill defense Elon Musk 2022", "hostile takeover dilution mechanics Wall Street"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Dark Tech Minimal / Cyber Threat Tension", "canvaSearchQuery": "finance business news reel dark modern", "popups": [{"time": "0:00 - 0:03", "text": "WALL STREET'S SUICIDE BUTTON \ud83d\udc8a", "sfx": "\ud83d\udca5 Distorted Glitch", "effect": "Neon Cyan / Red Pulse", "action": "Start with high-tension financial term"}, {"time": "0:06 - 0:12", "text": "HOSTILE TAKEOVER ALERT \u26a0\ufe0f", "sfx": "\ud83d\udea8 Siren Beep", "effect": "Warning Banner Flash", "action": "Explain billionaire predator attacking company"}, {"time": "0:15 - 0:22", "text": "THE DILUTION BOMB \ud83d\udca3", "sfx": "\ud83d\udca8 Explosive Whoosh", "effect": "Zoom Burst / Red Highlight", "action": "Explain 50% discount rights to other shareholders"}, {"time": "0:25 - 0:32", "text": "HOSTILE STAKE DISSOLVES", "sfx": "\ud83d\udcc9 Descending Synth", "effect": "Fade To Smoke / Strikethrough", "action": "Show raider's billions being destroyed"}, {"time": "0:35 - 0:42", "text": "FAIR DEFENSE OR CEO TRAP? \ud83d\udc47", "sfx": "\u2728 Tech Riser", "effect": "Slide Up Text Card", "action": "Call for opinions in comments"}]}}, {"id": "term-dead-cat-bounce", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "The Dead Cat Bounce", "subtitle": "Wall Street's most brutal slang for false hope", "difficulty": "Quick Explainer", "vibe": "Stock Market Savage Slang", "viralTrigger": "Morbid Humor & Financial Warning", "hook": "Wall Street traders have a dark, morbid rule for dying stocks: 'Even a dead cat will bounce if you drop it from a skyscraper.'", "hookAlt": "Before you buy that crashing stock that just went up 10%, make sure it's not a Dead Cat Bounce.", "summary": "A Dead Cat Bounce is a temporary, misleading recovery in the price of a severely declining asset, driven by short sellers taking profits rather than fundamental business health, right before the stock crashes to zero.", "breakdown": [{"label": "The Crash", "text": "A company suffers catastrophic news (fraud, insolvency) and plunges 80%."}, {"label": "The Fake Rally", "text": "Short sellers buy back shares to close positions, and inexperienced retail traders try to 'buy the dip', causing a 15% bounce."}, {"label": "The Trap", "text": "The rally has zero real buying power. Once the bounce fades, the stock plunges straight to zero."}], "scriptBlueprint": {"hook": "This is one of the most savage terms on Wall Street: the Dead Cat Bounce.", "body": "Imagine a stock drops 70% in a week. Suddenly, on Friday morning, it surges 15%. Novice investors rush in thinking, 'The bottom is in! I'm buying the dip!' Two days later, the stock drops another 50% to zero. What happened? A Dead Cat Bounce. The phrase comes from an old Wall Street saying: 'Even a dead cat will bounce if you drop it from high enough.' When an asset collapses, short sellers have to buy back shares to lock in their profits, creating a temporary artificial spike. It's not a sign of recovery\u2014it's gravity catching up with the corpse.", "cta": "Have you ever fallen for a dead cat bounce in crypto or stocks? Be honest in the comments."}, "creatorTip": "Draw a bouncing trajectory on screen or use sound effects to illustrate the false hope.", "researchQueries": ["Dead cat bounce Wall Street term origin 1985 Financial Times", "dead cat bounce technical analysis chart pattern", "bear market rally vs dead cat bounce psychology"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE DEAD CAT BOUNCE", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-golden-handcuffs", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "Golden Handcuffs & Vesting Cliffs", "subtitle": "How Big Tech traps geniuses in comfortable corporate prisons", "difficulty": "Quick Explainer", "vibe": "Corporate Dystopia", "viralTrigger": "Relatable Career Anxiety & High-Salary Secrets", "hook": "Why do hundreds of senior software engineers at Google and Meta admit to being completely miserable, but refuse to quit? Two words: Golden Handcuffs.", "hookAlt": "How Big Tech uses million-dollar financial shackles to ensure their smartest people never build competing startups.", "summary": "Golden Handcuffs are financial incentives (restricted stock units, deferred retention bonuses, vesting cliffs) structured over 4-5 years so leaving early forfeits hundreds of thousands of dollars.", "breakdown": [{"label": "The Setup", "text": "Companies offer a modest base salary ($180k) but attach $600k+ in unvested restricted stock units (RSUs) that pay out quarterly over four years."}, {"label": "The 1-Year Cliff", "text": "If you quit at 11 months, you get $0 in equity. After year one, refresher grants keep pushing your unvested balance higher."}, {"label": "The Trap", "text": "Employees spend 40 hours a week doing low-impact work or 'rest and vest', paralyzed by the fear of walking away from life-changing unvested paper wealth."}], "scriptBlueprint": {"hook": "Silicon Valley has a term for high-paid engineers who feel like prisoners: Golden Handcuffs.", "body": "Tech giants don't just pay big salaries; they design psychological traps. When you join a company like Meta or Google as a senior director, they might offer you $300,000 in base salary, but then they hand you $1 million in stock that vests slowly over four years. If you leave in year two, you forfeit half a million dollars. Just as you get close to year four, they give you a 'refresher grant' with another $600k locking you in for three more years. You want to quit and build your dream startup, but your lifestyle has inflated to match your paycheck. You are handcuffed to your desk\u2014except the handcuffs are made of pure gold.", "cta": "Would you trade 5 years of your life doing boring corporate work for $2 million in guaranteed stock?"}, "creatorTip": "Ask a provocative ethical question at the end to trigger passionate debates between corporate careerists and entrepreneurs.", "researchQueries": ["Golden Handcuffs tech compensation equity vesting cliff", "rest and vest culture Silicon Valley big tech", "RSU refresher grants employee retention strategy"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "GOLDEN HANDCUFFS & VESTING CLIFFS", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-corporate-cannibalism", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "Corporate Cannibalism", "subtitle": "Why Steve Jobs had to murder his own best-selling product", "difficulty": "Mind Bender", "vibe": "Ruthless Innovation", "viralTrigger": "Strategic Ruthlessness & Apple Lore", "hook": "Steve Jobs had a golden rule for business survival: 'If you don't cannibalize yourself, someone else will.'", "hookAlt": "In 2007, Apple intentionally killed the product that generated 50% of its entire revenue.", "summary": "Corporate Cannibalism is the deliberate strategy of introducing a new product that destroys sales of your own existing flagship product to prevent a competitor from doing it first (e.g. iPhone killing the iPod).", "breakdown": [{"label": "The Cash Cow", "text": "In 2005, the iPod was generating nearly half of Apple's total company revenue and was a cultural phenomenon."}, {"label": "The Threat", "text": "Jobs realized mobile phone manufacturers would eventually add music players, rendering the iPod standalone device obsolete."}, {"label": "The Sacrifice", "text": "Jobs greenlit the iPhone with a built-in iPod, knowing it would completely annihilate iPod sales. Today, iPhone is a multi-trillion-dollar business."}], "scriptBlueprint": {"hook": "In 2007, Apple committed corporate murder against its own best-selling device. Here's why it was the smartest move in tech history.", "body": "In 2006, the iPod was king. It accounted for nearly 50% of Apple's entire revenue. Most CEOs would protect that cash cow with their lives. But Steve Jobs looked at the rise of mobile phones and realized: 'Eventually, phones will play MP3s, and the standalone iPod will be dead.' Instead of waiting for Nokia or Motorola to do it, Jobs designed the iPhone with music built right into it. When asked if he was worried the iPhone would destroy iPod sales, Jobs said: 'If we don't cannibalize ourselves, someone else will.' The iPod died, but Apple became a 3-trillion-dollar empire.", "cta": "Look at Kodak or Blockbuster\u2014they refused to cannibalize their core business. Look what happened to them."}, "creatorTip": "Contrast Apple's willingness to cannibalize the iPod with Kodak's refusal to launch digital cameras.", "researchQueries": ["Steve Jobs cannibalize yourself quote Walter Isaacson biography", "Corporate cannibalism iPhone iPod sales impact", "Kodak digital camera failure innovator dilemma"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "CORPORATE CANNIBALISM", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-cobra-effect", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "The Cobra Effect (Perverse Incentives)", "subtitle": "When a reward system creates the exact catastrophe it tried to solve", "difficulty": "Quick Explainer", "vibe": "Historic Satire / Unintended Consequences", "viralTrigger": "Absurdist History & Irony", "hook": "The British government wanted to eliminate venomous snakes in India, so they offered cash for every dead cobra. The result? The cobra population exploded.", "hookAlt": "How an attempt to solve a problem accidentally made it 10 times worse: Meet the Cobra Effect.", "summary": "In colonial Delhi, authorities offered a bounty for dead cobras. Enterprising citizens started breeding cobras in secret to collect bounties. When the government canceled the program, breeders released them into the wild.", "breakdown": [{"label": "The Incentive", "text": "British authorities offered money for dead cobras to clean the streets."}, {"label": "The Perversion", "text": "People realized breeding cobras in basements was more profitable than working normal jobs."}, {"label": "The Backfire", "text": "When officials caught on and scrapped the cash reward, breeders dumped thousands of captive cobras into the city streets."}], "scriptBlueprint": {"hook": "There is a business rule called The Cobra Effect, and it shows why most company bonus structures completely backfire.", "body": "During British rule in colonial India, Delhi had an infestation of deadly cobras. The government announced a cash bounty for every dead cobra skin brought in. At first, it worked. But soon, locals realized: 'Why go hunting snakes in the jungle when we can just breed them in our basements for free money?' People set up giant underground cobra farms. When the government finally caught on, they scrapped the bounty. The breeders had no reason to feed thousands of venomous snakes, so they let them all loose into the city. The cobra population was higher than when they started.", "cta": "Can you think of a modern company whose metrics create crazy unintended consequences like this?"}, "creatorTip": "Great comedic timing works wonders here. Use an expressive tone when revealing the underground snake farms.", "researchQueries": ["Cobra Effect perverse incentives Horst Siebert origin", "British colonial Delhi cobra bounty unintended consequences", "Goodhart's Law vs Cobra effect economics"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE COBRA EFFECT (PERVERSE INCENTIVES)", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-pac-man-defense", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "The Pac-Man Defense", "subtitle": "When the prey turns around and swallows the predator", "difficulty": "Mind Bender", "vibe": "Wall Street Counter-Attack", "viralTrigger": "Pop Culture Metaphor & Reversal of Fortune", "hook": "What happens when a hostile corporate raider attacks your company, and instead of defending yourself, you turn around and buy THEM?", "hookAlt": "Named after the 1980 arcade game: the most aggressive counter-attack in Wall Street history.", "summary": "In M&A warfare, the Pac-Man Defense occurs when Company A attempts a hostile takeover of Company B, and Company B responds by securing billions in emergency financing to launch a counter-takeover of Company A.", "breakdown": [{"label": "The Video Game Logic", "text": "Just like Pac-Man eating a power pellet and turning around to devour the ghosts chasing him, the target company counters the attacker."}, {"label": "The 1982 Historic Duel", "text": "Bendix Corporation tried to take over Martin Marietta. Martin Marietta responded by launching a hostile tender offer to buy Bendix back, nearly bankrupting both companies."}, {"label": "The Deterrent", "text": "It requires enormous debt and courage, but it forces hostile bidders to hesitate before launching unprovoked raids."}], "scriptBlueprint": {"hook": "Wall Street has a combat move literally called the Pac-Man Defense, and it is the ultimate corporate Uno Reverse card.", "body": "Imagine a predatory corporate raider launches a hostile bid to buy your company and fire your executive team. Most companies panic or hire lawyers. But if you activate the Pac-Man Defense, you don't run away. You immediately take out billions in emergency debt, go to your attacker's shareholders, and offer to buy THEIR entire company instead. Just like Pac-Man eating a power pellet, the prey turns around and eats the ghost. In 1982, Martin Marietta pulled this off against Bendix, creating a legendary financial war that shocked Wall Street.", "cta": "If a bigger competitor tried to bully your startup, would you have the guts to pull a Pac-Man defense?"}, "creatorTip": "Use Pac-Man sound effects or imagery. Visualizing the ghost turning blue and getting eaten makes high-level M&A finance instantly accessible.", "researchQueries": ["Pac-Man defense mergers and acquisitions Bendix Martin Marietta 1982", "hostile takeover counter-bid strategy Pac-Man", "corporate governance defense mechanisms Wall Street"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE PAC-MAN DEFENSE", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "term-godfather-offer", "category": "Dramatic Business Terms", "categorySlug": "dramatic_business_terms", "title": "The Godfather Offer", "subtitle": "An acquisition tender offer that cannot legally be refused", "difficulty": "Quick Explainer", "vibe": "Mob Boss Capitalism", "viralTrigger": "Power Moves & Corporate Pressure", "hook": "In business, there is a maneuver called a 'Godfather Offer'\u2014an acquisition offer so insanely high that the board of directors can go to prison if they reject it.", "hookAlt": "How an acquirer uses fiduciary duty to force founders out of their own companies.", "summary": "Borrowed from Mario Puzo's line 'I'll make him an offer he can't refuse'. A Godfather Offer is a tender offer priced so astronomically above market value that rejecting it violates the board's fiduciary duty to shareholders, risking catastrophic lawsuits.", "breakdown": [{"label": "The Premium", "text": "If a stock trades at $30, a bidder offers $65 per share in all-cash."}, {"label": "The Legal Trap", "text": "The Board of Directors has a legal fiduciary obligation (the Revlon Rule) to maximize shareholder value. Rejecting a 100%+ premium opens board members to personal liability."}, {"label": "The Founder's Nightmare", "text": "Founders who want to keep running their business are essentially trapped by their own board into selling."}], "scriptBlueprint": {"hook": "Ever hear of a 'Godfather Offer'? It's when a buyer makes an offer so absurdly huge that a company's board of directors is legally forced to surrender.", "body": "Say you founded a tech company. Your stock is trading at $40. Suddenly, Microsoft or Oracle walks in and offers $90 a share in cash. You don't want to sell\u2014this is your baby! But here's the catch: under corporate law, the board of directors has a sacred 'fiduciary duty' to shareholders. If the board rejects a massive premium to protect your job as founder, public shareholders can sue every board member personally for hundreds of millions of dollars. The bidder made an offer that literally cannot be refused.", "cta": "If you built your dream company, would you sell out for an absurd Godfather Offer or fight it?"}, "creatorTip": "Channel a dramatic tone. Emphasize the conflict between founder passion and legal corporate duty.", "researchQueries": ["Godfather Offer corporate finance tender offer Revlon rule", "fiduciary duty hostile takeover board of directors liability", "Oracle Peoplesoft hostile takeover godfather offer"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE GODFATHER OFFER", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-pratfall-effect", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Pratfall Effect", "subtitle": "Why making a clumsy mistake makes people like you 10x more", "difficulty": "Quick Explainer", "vibe": "Charisma & Dating Psychology", "viralTrigger": "Relatable Vulnerability & Charisma Hack", "hook": "If you want someone to like and trust you, stop trying to look perfect. In psychology, there is a concept that proves making a mistake is actually your greatest superpower.", "hookAlt": "Why did Jennifer Lawrence tripping over her dress at the Oscars make the entire internet fall in love with her?", "summary": "Coined by social psychologist Elliot Aronson in 1966: a competent person who makes a clumsy blunder (a 'pratfall') becomes significantly more likable, while an incompetent person making the same mistake becomes less likable.", "breakdown": [{"label": "The 1966 Experiment", "text": "Participants listened to recordings of people answering difficult trivia questions with 92% accuracy. In one tape, the genius spilled a cup of coffee over his suit."}, {"label": "The Result", "text": "The genius who spilled coffee was rated dramatically more attractive and likable than the genius who made zero mistakes."}, {"label": "The Mechanism", "text": "Unflinching perfection makes people feel insecure and distant. A minor flaw humanizes you and bridges the empathy gap."}], "scriptBlueprint": {"hook": "Here is a psychological hack that will instantly make people like you more: make a clumsy mistake on purpose.", "body": "In 1966, psychologist Elliot Aronson ran a famous study. He had an actor answer a difficult trivia quiz with 92% accuracy, sounding like an absolute genius. In one group, the actor answered everything flawlessly. In the second group, after answering, he accidentally knocked over a cup of coffee and stammered, 'Oh no, I spilled coffee all over my new suit!' When the audience rated how much they liked him, the coffee-spiller scored significantly higher. This is called the Pratfall Effect. Flawless people make us feel judged and insecure. But when a capable person shows a small vulnerability, they become relatable and magnetic.", "cta": "Try admitting a small harmless mistake in your next conversation and watch how quickly people warm up to you."}, "creatorTip": "Film this with warmth. Great advice for creators who are afraid of stuttering or making small bloopers on camera.", "researchQueries": ["Elliot Aronson Pratfall Effect 1966 coffee experiment", "Pratfall effect psychology attractiveness likability", "Steve Jobs antenna gate pratfall effect public relations"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE PRATFALL EFFECT", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-baader-meinhof", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Baader-Meinhof Phenomenon", "subtitle": "Why a word you learned yesterday is suddenly everywhere", "difficulty": "Quick Explainer", "vibe": "Matrix Glitch / Mind Trick", "viralTrigger": "Universal Shared Experience (Matrix Feeling)", "hook": "Have you ever learned a weird new word or bought a specific red car, and suddenly for the next 48 hours, you see that exact car or word everywhere? You didn't enter a simulation.", "hookAlt": "Why does the universe seem to copy whatever you just thought about? Meet the Frequency Illusion.", "summary": "The Baader-Meinhof phenomenon occurs when your brain's selective attention flags a newly discovered concept as important, followed by confirmation bias convincing you that the frequency has increased in reality.", "breakdown": [{"label": "The Name Origin", "text": "Named in 1994 when a reader wrote into the St. Paul Pioneer Press noting that after mentioning the obscure German group 'Baader-Meinhof', he read about them twice that week."}, {"label": "Selective Attention", "text": "Your brain filters out 99% of sensory noise. When you learn something new, your subconscious marks it as a recognizable pattern."}, {"label": "Confirmation Bias", "text": "Every time you encounter the item again, your brain rings an alarm bell, tricking you into thinking its actual frequency increased in the real world."}], "scriptBlueprint": {"hook": "You know that creepy feeling when you learn a rare new word, and suddenly you hear three different people say it in the same week? Here's why that happens.", "body": "It's called the Baader-Meinhof Phenomenon, or the Frequency Illusion. Your brain processes millions of bits of information every second, and to keep your skull from overheating, it throws away 99% of what you see and hear. But the moment you consciously learn a new concept\u2014like a rare medical term or an unusual vintage watch\u2014your brain's visual cortex flags it: 'Hey, this is relevant now!' The frequency didn't actually increase in the world\u2014you were just walking right past it every day with your brain on autopilot.", "cta": "What was the last thing you experienced the Baader-Meinhof phenomenon with? Drop it below."}, "creatorTip": "Directly address the viewer's experience. Use glitch-in-the-matrix sound effects or visuals to increase watch time.", "researchQueries": ["Baader Meinhof phenomenon frequency illusion Arnold Zwicky", "selective attention cognitive bias frequency illusion", "St Paul Pioneer Press Baader Meinhof 1994 letter"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE BAADER-MEINHOF PHENOMENON", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-decoy-effect", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Decoy Effect (Asymmetric Dominance)", "subtitle": "How movie theaters force you to buy the $9 popcorn", "difficulty": "Quick Explainer", "vibe": "Consumer Brain Hacks", "viralTrigger": "Pricing Psychology & Outsmarting Traps", "hook": "Movie theaters don't expect anyone to buy the Medium popcorn. It exists solely as an asymmetric decoy to manipulate you into buying the Large.", "hookAlt": "Here is the exact pricing trick companies use to make a $9 item feel like an unbeatable bargain.", "summary": "The Decoy Effect occurs when adding an asymmetrically dominated third option shifts consumer preference between the original two options. Small $3, Medium $6.50, Large $7 \u2014 Medium makes Large feel like a no-brainer steal.", "breakdown": [{"label": "The Dilemma", "text": "Between Small ($3) and Large ($7), most price-sensitive consumers choose the Small to save money."}, {"label": "The Decoy", "text": "The company introduces a Medium size priced at $6.50."}, {"label": "The Decision Shift", "text": "Consumers look at Medium ($6.50) and Large ($7.00) and think: 'For just 50 cents more, I get double the size!' The Medium's sole purpose is to make Large look like a genius deal."}], "scriptBlueprint": {"hook": "Next time you buy movie theater popcorn, look closely at the menu. You are being psychologically played.", "body": "Imagine you walk up to the concession stand. A Small popcorn is $3.00, and a Large is $7.00. Most people think, 'Seven bucks for popcorn is highway robbery,' and they order the Small. But now look at what happens when the theater adds a Medium for $6.50. Suddenly, nobody buys the Small, and nobody buys the Medium. Everyone looks at the board and thinks: 'Wait, for only 50 cents more than the Medium, I get a giant tub of Large?! That's a steal!' That Medium popcorn is called a Decoy. It is engineered to be a bad deal so the expensive option looks like a bargain.", "cta": "Have you ever caught yourself falling for the decoy effect? Tell me where."}, "creatorTip": "Draw the 3 sizes on paper or hold up three cups of different sizes to give strong visual pacing.", "researchQueries": ["Decoy effect asymmetric dominance pricing psychology", "Dan Ariely The Economist subscription decoy experiment", "popcorn pricing decoy effect movie theater economics"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE DECOY EFFECT (ASYMMETRIC DOMINANCE)", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-barnum-effect", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Barnum Effect (Forer Effect)", "subtitle": "The psychological trick behind horoscopes and personality tests", "difficulty": "Quick Explainer", "vibe": "Skeptic Mind Trick", "viralTrigger": "Exposing Astrology & Viral Quizzes", "hook": "I can guess your personality right now with 95% accuracy: 'You have a great need for other people to like and admire you, but you tend to be critical of yourself.' Creepy, right?", "hookAlt": "Here is the exact psychological exploit that makes astrology and TikTok personality tests feel 100% real.", "summary": "Named after showman P.T. Barnum: people give high accuracy ratings to descriptions of their personality that are supposed to be tailored specifically to them, but which are in fact vague and general enough to apply to almost everyone.", "breakdown": [{"label": "The 1948 Forer Study", "text": "Psychologist Bertram Forer gave students a personality test, then handed each student their 'custom' results. Students rated the accuracy 4.26 out of 5."}, {"label": "The Twist", "text": "Every single student received the exact same identical text taken from an astrology column in a newsstand magazine."}, {"label": "The Exploitation", "text": "Tarot readers, astrologers, and corporate personality tests use Barnum statements to manufacture instant rapport."}], "scriptBlueprint": {"hook": "I have never met you before, but I can read your mind right now: 'You have a lot of unused potential that you haven't turned to your advantage yet. While you have some character weaknesses, you are generally able to compensate for them.'", "body": "Did that feel uncomfortably accurate? In 1948, psychologist Bertram Forer gave his college students a detailed personality test. The next week, he handed each student their unique results and asked them to rate how accurate it was from 1 to 5. The average rating was 4.26 out of 5. Then Forer told the students to look at their neighbor's paper. Every single student in the lecture hall had received the exact same paragraph copied from a supermarket astrology book. Psychologists call this the Barnum Effect. When vague statements apply to almost every human being, our egos fill in the blanks and convince us it was written just for us.", "cta": "Do you believe in astrology, or do you think it's 100% the Barnum effect?"}, "creatorTip": "Read the Barnum quote slowly and look straight into the camera. It hooks viewers with an uncanny personal connection.", "researchQueries": ["Bertram Forer 1948 experiment fallacy of personal validation", "Barnum effect P.T. Barnum psychology astrology", "cold reading techniques Barnum statements mentalism"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE BARNUM EFFECT (FORER EFFECT)", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-ikea-effect", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The IKEA Effect", "subtitle": "Why you irrationally overvalue anything you put together yourself", "difficulty": "Quick Explainer", "vibe": "Everyday Behavioral Quirk", "viralTrigger": "Household Relatability & DIY Psychology", "hook": "Why does a wobbly $50 coffee table you built with an Allen wrench feel more valuable to you than a $500 designer table? Welcome to the IKEA Effect.", "hookAlt": "In the 1950s, instant cake mix failed because it was too easy. Here is how adding labor saved it.", "summary": "Identified by Michael Norton, Daniel Mochon, and Dan Ariely in 2011: people place disproportionately higher value on objects they partially created or assembled, regardless of the objective quality of the end product.", "breakdown": [{"label": "The Cake Mix Discovery", "text": "In the 1950s, Betty Crocker launched an 'add water only' cake mix. It flopped because housewives felt no emotional pride. When they removed powdered eggs and required adding fresh eggs, sales soared."}, {"label": "The 2011 Study", "text": "Participants who built simple IKEA storage boxes valued them 63% higher than identical pre-assembled boxes."}, {"label": "Business Application", "text": "Build-A-Bear, meal-prep kits like HelloFresh, and customized software onboarding all leverage this to prevent customer churn."}], "scriptBlueprint": {"hook": "In the 1950s, instant cake mix completely failed in grocery stores because it was too convenient. Here's what fixed it.", "body": "When Betty Crocker launched instant cake mix, you literally just added water and baked it. It tasted great, but women refused to buy it. Psychologists studied why: people felt guilty. They felt like they were cheating and taking credit for a cake they didn't make. So the company changed the formula: they removed powdered eggs and instructed bakers to crack and whip fresh eggs themselves. Sales skyrocketed. When we invest physical effort and labor into something, our brain automatically assigns it immense sentimental value. Psychologists call this the IKEA Effect. It's why that crooked bookshelf you spent three hours swearing at feels priceless to you.", "cta": "Do you prefer buying ready-made things or building them yourself?"}, "creatorTip": "Hold up an Allen wrench or a cake mix box. Tangible props create high retention rates in the first 3 seconds.", "researchQueries": ["IKEA effect Dan Ariely Michael Norton 2011 study", "Betty Crocker egg cake mix instant psychology Ernest Dichter", "labor investment and subjective product valuation"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE IKEA EFFECT", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-ben-franklin", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Ben Franklin Effect", "subtitle": "The counterintuitive trick to turn your enemies into allies", "difficulty": "Quick Explainer", "vibe": "Social Hacking / Friendship Hack", "viralTrigger": "Interpersonal Power Move & Social Hack", "hook": "If you want someone who dislikes you to become your best friend, do not do them a favor. Ask them to do YOU a small favor.", "hookAlt": "How Benjamin Franklin neutralized his bitterest political rival using a single rare book.", "summary": "The Ben Franklin Effect is a psychological phenomenon where doing someone a favor makes you like them more. The brain resolves cognitive dissonance by concluding: 'I wouldn't help this person unless I liked them.'", "breakdown": [{"label": "The Historical Feud", "text": "In the Pennsylvania legislature, a powerful rival opposed Franklin. Franklin refused to flatter him."}, {"label": "The Request", "text": "Franklin knew the rival had a rare, scarce library book. He sent a polite note asking to borrow it for a few days."}, {"label": "The Transformation", "text": "The rival sent the book. When they next met, the rival spoke to Franklin with great civility, and they remained close friends until death."}], "scriptBlueprint": {"hook": "Want to make someone instantly like you? Stop doing favors for them. Ask them for a favor instead.", "body": "In 1737, Benjamin Franklin had a bitter political enemy in the Pennsylvania assembly who was trying to destroy his career. Franklin didn't buy him gifts or flatter him. Instead, Franklin sent him a polite note asking to borrow a rare book from his private library for a week. The rival was flattered, loaned the book, and when Franklin returned it with a thank-you note, the rival became one of his closest lifelong allies. Why does this work? It's called Cognitive Dissonance. When your brain performs a helpful action for someone, it rationalizes: 'I wouldn't waste my time helping someone I hate... so I must actually like them!'", "cta": "Have you ever tried asking an enemy for a small favor? Try it this week."}, "creatorTip": "Great relationship / workplace politics hook. Keep the historical anecdote snappy and focus on the psychological payoff.", "researchQueries": ["Ben Franklin effect cognitive dissonance rival book autobiography", "Jecker and Landy 1969 psychological study favor liking", "cognitive dissonance resolution in interpersonal relationships"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE BEN FRANKLIN EFFECT", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "psych-dunning-kruger", "category": "Psychological Concepts", "categorySlug": "psychological_concepts", "title": "The Dunning-Kruger Effect & Mount Stupid", "subtitle": "Why the least competent people are the most confident", "difficulty": "Mind Bender", "vibe": "Intellectual Roast", "viralTrigger": "Relatable Internet Commenter Syndrome", "hook": "Ever notice how people who know almost nothing about politics, finance, or fitness argue with 100% supreme confidence? Science has a name for this: Mount Stupid.", "hookAlt": "In 1995, a man robbed two banks with lemon juice smeared on his face. His mistake created modern psychology.", "summary": "Psychologists David Dunning and Justin Kruger demonstrated that people with low ability in a domain lack the metacognitive competence to recognize their own incompetence, producing illusory superiority.", "breakdown": [{"label": "The Lemon Juice Robber", "text": "McArthur Wheeler robbed two Pittsburgh banks in broad daylight without a mask. He believed lemon juice (used as invisible ink) made his face invisible to security cameras."}, {"label": "The Study", "text": "Dunning and Kruger tested students on grammar, logic, and humor. The lowest 25% performers consistently estimated their ability in the 60th-70th percentile."}, {"label": "The Curve", "text": "Beginners rapidly climb 'Mount Stupid' with sky-high confidence, then plunge into the 'Valley of Despair' as they realize how vast the subject actually is."}], "scriptBlueprint": {"hook": "In 1995, a man robbed two Pittsburgh banks with lemon juice rubbed all over his face. When police arrested him that night, he was genuinely shocked and said: 'But I wore the juice!'", "body": "McArthur Wheeler believed that because lemon juice works as invisible ink on paper, rubbing it on his face made him invisible to security cameras. This bizarre crime fascinated psychologist David Dunning, who teamed up with Justin Kruger to study a profound truth: incompetent people lack the very expertise needed to realize they are incompetent. On the Dunning-Kruger curve, a total beginner learns 5% of a topic and immediately reaches 'Mount Stupid'\u2014where confidence is at 100%. Only when you actually study deeper do you fall into the 'Valley of Despair' and realize how little you truly know.", "cta": "What topic were you once completely confident in, until you realized you knew nothing?"}, "creatorTip": "Show the classic Dunning-Kruger curve with 'Mount Stupid' highlighted. The lemon juice story is an unbeatable 3-second hook.", "researchQueries": ["McArthur Wheeler lemon juice bank robbery invisible face 1995", "David Dunning Justin Kruger 1999 journal study unkilled and unaware", "Mount Stupid Dunning Kruger curve stages"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE DUNNING-KRUGER EFFECT & MOUNT STUPID", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "hack-gruen-transfer", "category": "Marketing Hacks", "categorySlug": "marketing_hacks", "title": "The Gruen Transfer", "subtitle": "The architecture trick that puts your brain into a shopping trance", "difficulty": "Mind Bender", "vibe": "Architectural Mind Control", "viralTrigger": "Mall Culture & Hidden Psychological Architecture", "hook": "Ever walked into an IKEA, a mall, or a casino planning to buy one quick thing, and suddenly woke up 2 hours later with a cart full of stuff? You were hit by the Gruen Transfer.", "hookAlt": "Architects design shopping malls to literally turn off the rational part of your brain.", "summary": "Named after architect Victor Gruen: the intentional creation of a disorienting, windowless, clock-free environment that overwhelms a visitor's navigational senses, transforming focused shoppers into passive impulse buyers.", "breakdown": [{"label": "The Designer", "text": "Victor Gruen designed the first enclosed suburban mall in 1956 (Southdale Center, Minnesota). He ironically hated consumerism and wanted civic gathering spaces."}, {"label": "The Sensory Overload", "text": "High ceilings, diffuse lighting, absence of clocks and exterior windows, and serpentine curving pathways destroy your internal sense of direction."}, {"label": "The Psychological Shift", "text": "Once your brain gives up on calculating the exit route, you enter a relaxed, trance-like state where critical price skepticism shuts down."}], "scriptBlueprint": {"hook": "Why are there no clocks or windows in shopping malls and casinos? It's not an accident. It's called the Gruen Transfer.", "body": "In 1956, architect Victor Gruen designed the first indoor shopping mall in Minnesota. He discovered a sinister architectural phenomenon: when you place people inside a disorienting maze with curved walkways, no exterior windows, no clocks, and identical shopfronts, their brain's navigational compass shorts out. The moment you lose track of time and direction, you experience the 'Gruen Transfer'. You shift from a focused shopper looking for one specific item into a dazed, sensory-stimulated consumer who impulse-buys things they don't need.", "cta": "Which store makes you lose your mind the fastest: IKEA, Target, or the mall?"}, "creatorTip": "Walk through an IKEA or mall, or use images of windowless mall atriums. The feeling of 'time dilation in Target' resonates with 99% of people.", "researchQueries": ["Gruen Transfer retail architecture Victor Gruen 1956", "why shopping malls have no clocks or windows psychological trance", "IKEA maze layout directional disorientation impulse buying"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE GRUEN TRANSFER", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "hack-sensory-branding", "category": "Marketing Hacks", "categorySlug": "marketing_hacks", "title": "Sensory Branding & Signature Scents", "subtitle": "How retail stores hack your limbic system through your nostrils", "difficulty": "Quick Explainer", "vibe": "Subconscious Manipulation", "viralTrigger": "Olfactory Memory & Nostalgia", "hook": "You can smell an Abercrombie & Fitch store from 200 feet down the mall hallway. That scent wasn't an employee being sloppy with cologne\u2014it was injected through the HVAC vents.", "hookAlt": "Why did Singapore Airlines patent their own signature perfume in the 1990s?", "summary": "Olfactory branding bypasses the conscious brain because the sense of smell is wired directly to the amygdala and hippocampus (emotion and memory). Brands custom-synthesize signature scents to forge subconscious loyalty.", "breakdown": [{"label": "The Abercrombie Scent Machine", "text": "Stores installed automated atomizers in the ceiling that sprayed their signature 'Fierce' fragrance every 20 minutes to drown out other mall scents."}, {"label": "Singapore Airlines (Stefan Floridian Waters)", "text": "In the 1990s, they patented a signature fragrance worn by flight attendants and sprayed on hot towels to reduce passenger flight anxiety."}, {"label": "The Neuroscience", "text": "Visual memory degrades 50% after a few months, but scent memory retains 65% accuracy after a full year."}], "scriptBlueprint": {"hook": "If you've ever smelled an Abercrombie & Fitch before you even saw it, you've been subjected to weaponized olfactory branding.", "body": "Your sense of smell is the only human sense that connects directly to your brain's emotional center\u2014the amygdala\u2014without passing through the rational thalamus first. Retailers know this. Abercrombie famously hooked computerized scent-diffusion machines into their ceiling air ducts, pumping their 'Fierce' cologne into the mall every 15 minutes. In the 1990s, Singapore Airlines went even further: they patented a custom scent called 'Stefan Floridian Waters' and applied it to every flight attendant's uniform and hot towel so frequent flyers unconsciously felt calm and at home.", "cta": "What store has a smell that you could identify blindfolded in 2 seconds?"}, "creatorTip": "Pretend to smell the air in the first second. Great visceral physical hook for viewers scrolling on TikTok or Reels.", "researchQueries": ["Abercrombie and Fitch Fierce scent diffuser ceiling vents HVAC", "Singapore Airlines Stefan Floridian Waters sensory branding Martin Lindstrom", "olfactory marketing amygdala memory retention consumer behavior"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "SENSORY BRANDING & SIGNATURE SCENTS", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "hack-menu-anchoring", "category": "Marketing Hacks", "categorySlug": "marketing_hacks", "title": "Menu Anchoring & The $140 Steak", "subtitle": "The decoy dish that makes a $45 burger feel like a steal", "difficulty": "Quick Explainer", "vibe": "Restaurant Industry Secrets", "viralTrigger": "Dining Out Relatability & Money Hacks", "hook": "High-end restaurants do not actually expect you to order the $140 Wagyu tomahawk steak at the top of the menu. It's there to trick you into ordering the $48 chicken.", "hookAlt": "Here is the sneaky psychological trick hidden in the top-right corner of every luxury restaurant menu.", "summary": "Menu Anchoring places an extravagantly expensive item at the top of the menu to reset the consumer's price ceiling. Everything below it feels moderate and reasonable in comparison.", "breakdown": [{"label": "The Anchor", "text": "Your eye naturally lands on the top-right of a menu first. Seeing a $140 steak anchors your brain's baseline for 'expensive'."}, {"label": "The Contrast", "text": "When you scan down to the $48 pasta or $42 fish, your brain computes: 'Well, at least it's not $140!' even though $48 for pasta is astronomical."}, {"label": "No Dollar Signs", "text": "Notice top restaurants print '48' instead of '$48.00'. Studies show removing currency symbols reduces the physical 'pain of paying'."}], "scriptBlueprint": {"hook": "Ever wonder why luxury restaurants put a ridiculously overpriced $150 tomahawk steak right at the top of their menu?", "body": "It's not because it's their best seller. In restaurant engineering, that $150 dish is called an 'Anchor'. Your eyes naturally read the top-right of the menu first. Once your brain sees 150, that number becomes your subconscious price reference. When you look down and see the roasted salmon for $48, your brain rationalizes: 'Phew, $48 is actually pretty reasonable!' You just paid fifty bucks for twelve ounces of fish, and you feel smart about it. Plus, notice how high-end menus never use dollar signs? Eliminating the '$' symbol reduces the subconscious pain of parting with cash.", "cta": "Next time you go out to dinner, look for the anchor dish. What's the wildest menu price you've ever seen?"}, "creatorTip": "Hold up a menu or pretend to read one while talking. Clear, actionable takeaway for viewers the next time they dine out.", "researchQueries": ["Menu engineering price anchoring Cornell University restaurant study", "removing dollar signs from menu pain of paying psychology", "Gregg Rapp menu design consulting high margin anchoring"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "MENU ANCHORING & THE $140 STEAK", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}, {"id": "hack-skinner-box", "category": "Marketing Hacks", "categorySlug": "marketing_hacks", "title": "The Skinner Box & Variable Ratio Rewards", "subtitle": "Why your thumb won't stop pulling down on social media feeds", "difficulty": "Mind Bender", "vibe": "Addiction Science", "viralTrigger": "Social Media Addiction & Tech Dystopia", "hook": "Why does refreshing your Instagram or TikTok feed feel exactly like pulling the lever on a Las Vegas slot machine? Because both were designed using pigeon torture experiments from the 1950s.", "hookAlt": "Big Tech didn't hire product designers to build your feed. They hired casino gambling psychologists.", "summary": "B.F. Skinner's operant conditioning chamber proved that unpredictable rewards (variable ratio schedules) produce maximum compulsive behavior. The 'pull-to-refresh' mechanic mimics a slot machine's spinning reels.", "breakdown": [{"label": "The Pigeon Experiment", "text": "Skinner gave pigeons a lever. If the lever gave food every time, the pigeon ate only when hungry. If it gave food at random intervals, the pigeon tapped the lever frantically until exhaustion."}, {"label": "The Infinite Scroll", "text": "Aza Raskin, who invented the infinite scroll in 2006, publicly expressed remorse because it eliminated the natural cognitive stopping cues our brains rely on."}, {"label": "The Slot Machine Motion", "text": "Loren Brichter invented the 'pull-to-refresh' gesture for Twitter in 2008. The slight pause before new posts appear acts as the anticipation cycle of a casino slot machine."}], "scriptBlueprint": {"hook": "You are currently holding a digital slot machine in your hands right now. Here is the science behind why you can't put it down.", "body": "In the 1950s, psychologist B.F. Skinner put pigeons in a box with a food lever. When the lever gave food every single time, the pigeons stayed calm. But when he made the food drop at random, unpredictable intervals, the pigeons went insane\u2014pecking the lever compulsively thousands of times an hour. Tech platforms weaponized this with the 'pull-to-refresh' mechanic. When you swipe down on your feed and see that little spinning wheel pause for one second, your brain experiences the exact same dopamine spike as a gambler in Vegas watching slot machine reels spin. You don't know if the next post will be boring or life-changing, so your thumb keeps swiping.", "cta": "How many hours of screen time did you rack up yesterday? Check your settings and confess below."}, "creatorTip": "Point directly at the viewer's screen or phone. Highly meta because they are watching your reel on the exact platform you are exposing.", "researchQueries": ["B.F. Skinner operant conditioning chamber variable ratio schedule", "Loren Brichter pull to refresh Twitter slot machine design", "Aza Raskin infinite scroll addiction ethical tech Tristan Harris"], "canvaTemplate": {"aspectRatio": "9:16 (1080 x 1920 px Vertical Video)", "videoSlot": "Full-bleed background video slot with 20% dark vignette overlay for maximum caption legibility", "audioVibe": "Trending Lo-Fi Hip Hop / Viral Talking-Head Groove", "canvaSearchQuery": "tiktok reel captions talking head kinetic typography", "popups": [{"time": "0:00 - 0:03", "text": "THE SKINNER BOX & VARIABLE RATIO REWARDS", "sfx": "\ud83d\udca5 Impact Thud / Pop", "effect": "Bold Pop / Yellow Accent", "action": "Punchy hook delivery with head-turn"}, {"time": "0:05 - 0:11", "text": "THE HIDDEN TRUTH \ud83d\udc41\ufe0f", "sfx": "\ud83d\udca8 Fast Whoosh", "effect": "Slide In / Cyan Glow", "action": "Introduce core conflict or anomaly"}, {"time": "0:14 - 0:22", "text": "THE SECRET MECHANISM", "sfx": "\ud83d\udd14 Glass Ding", "effect": "Kinetic Word-by-Word", "action": "Breakdown how the psychological/business trick works"}, {"time": "0:25 - 0:32", "text": "HOW IT AFFECTS YOU", "sfx": "\u26a1 Sub Drop", "effect": "Highlight Box / Neon Border", "action": "Bridge to everyday viewer experience"}, {"time": "0:35 - 0:42", "text": "WHAT DO YOU THINK? \ud83d\udc47", "sfx": "\u2728 Final Chime", "effect": "Bouncing Interactive Sticker", "action": "Trigger algorithmic comment spike"}]}}];
+
+    // Application State
+    let currentCategory = 'all';
+    let filteredTopics = [...TOPICS_DATA];
+    let currentTopicIndex = 0;
+    let savedTopicIds = JSON.parse(localStorage.getItem('reel_roulette_saved') || '[]');
+    let currentTheme = localStorage.getItem('reel_theme') || 'light';
+    let isDirectoryMode = false;
+    let isTrendsMode = false;
+
+    // Apply saved theme immediately
+    document.documentElement.setAttribute('data-theme', currentTheme);
+    updateThemeToggleLabel();
+
+    function updateThemeToggleLabel() {
+      const themeIcon = document.getElementById('themeIcon');
+      if (currentTheme === 'light') {
+        themeIcon.innerText = '☀️ Light';
+      } else {
+        themeIcon.innerText = '🌙 Dark';
+      }
+    }
+
+    function toggleTheme() {
+      currentTheme = currentTheme === 'light' ? 'dark' : 'light';
+      document.documentElement.setAttribute('data-theme', currentTheme);
+      localStorage.setItem('reel_theme', currentTheme);
+      updateThemeToggleLabel();
+      showToast(`Switched to ${currentTheme} theme`, currentTheme === 'light' ? '☀️' : '🌙');
+    }
+
+    // DOM Elements
+    const cardTitle = document.getElementById('cardTitle');
+    const cardSubtitle = document.getElementById('cardSubtitle');
+    const catBadge = document.getElementById('catBadge');
+    const vibeBadge = document.getElementById('vibeBadge');
+    const difficultyBadge = document.getElementById('difficultyBadge');
+    const hookText = document.getElementById('hookText');
+    const hookAltText = document.getElementById('hookAltText');
+    const breakdownGrid = document.getElementById('breakdownGrid');
+    const scriptAct1 = document.getElementById('scriptAct1');
+    const scriptAct2 = document.getElementById('scriptAct2');
+    const scriptAct3 = document.getElementById('scriptAct3');
+    const creatorTipText = document.getElementById('creatorTipText');
+    const researchLinks = document.getElementById('researchLinks');
+    const topicCard = document.getElementById('topicCard');
+    const rollBtn = document.getElementById('rollBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const prevBtn = document.getElementById('prevBtn');
+    const saveBtn = document.getElementById('saveBtn');
+    const copyHookBtn = document.getElementById('copyHookBtn');
+    const copyScriptBtn = document.getElementById('copyScriptBtn');
+    const copyAllBtn = document.getElementById('copyAllBtn');
+    const toast = document.getElementById('toast');
+    const toastMsg = document.getElementById('toastMsg');
+    const categoryPills = document.getElementById('categoryPills');
+    const currentIndexNum = document.getElementById('currentIndexNum');
+    const totalTopicsNum = document.getElementById('totalTopicsNum');
+    const savedCountBadge = document.getElementById('savedCountBadge');
+    const themeToggleBtn = document.getElementById('themeToggleBtn');
+    
+    // Canva Modal DOM
+    const openCanvaModalBtn = document.getElementById('openCanvaModalBtn');
+    const canvaModal = document.getElementById('canvaModal');
+    const closeCanvaModalBtn = document.getElementById('closeCanvaModalBtn');
+    const closeCanvaModalBtn2 = document.getElementById('closeCanvaModalBtn2');
+    const canvaStudioTitle = document.getElementById('canvaStudioTitle');
+    const canvaCueTableBody = document.getElementById('canvaCueTableBody');
+    const canvaAudioVibeText = document.getElementById('canvaAudioVibeText');
+    const mockupHookCard = document.getElementById('mockupHookCard');
+    const mockupKeywordPill = document.getElementById('mockupKeywordPill');
+    const mockupAudioTag = document.getElementById('mockupAudioTag');
+    const directCanvaLink = document.getElementById('directCanvaLink');
+    const copyCueSheetBtn = document.getElementById('copyCueSheetBtn');
+
+    // Host Guide Modal
+    const hostGuideBtn = document.getElementById('hostGuideBtn');
+    const hostModal = document.getElementById('hostModal');
+    const closeHostModalBtn = document.getElementById('closeHostModalBtn');
+    const closeHostModalBtn2 = document.getElementById('closeHostModalBtn2');
+
+    // Queue Modal
+    const queueModal = document.getElementById('queueModal');
+    const savedQueueBtn = document.getElementById('savedQueueBtn');
+    const closeQueueBtn = document.getElementById('closeQueueBtn');
+    const savedListContainer = document.getElementById('savedListContainer');
+    const emptyQueueState = document.getElementById('emptyQueueState');
+    const clearQueueBtn = document.getElementById('clearQueueBtn');
+    const exportMarkdownBtn = document.getElementById('exportMarkdownBtn');
+
+    // Views
+    const randomizerView = document.getElementById('randomizerView');
+    const directoryView = document.getElementById('directoryView');
+    const trendsView = document.getElementById('trendsView');
+    const viewToggleBtn = document.getElementById('viewToggleBtn');
+    const viewTrendsBtn = document.getElementById('viewTrendsBtn');
+    const viewIcon = document.getElementById('viewIcon');
+    const viewLabel = document.getElementById('viewLabel');
+    const directoryGrid = document.getElementById('directoryGrid');
+    const dirSearchInput = document.getElementById('dirSearchInput');
+    const dirResultsCount = document.getElementById('dirResultsCount');
+
+    let toastTimeout;
+    function showToast(text, icon = '📋') {
+      toastMsg.innerText = text;
+      document.getElementById('toastIcon').innerText = icon;
+      toast.classList.add('show');
+      clearTimeout(toastTimeout);
+      toastTimeout = setTimeout(() => {
+        toast.classList.remove('show');
+      }, 2500);
+    }
+
+    function getBadgeClass(categorySlug) {
+      if (categorySlug === 'brand_secrets') return 'badge-brand';
+      if (categorySlug === 'dramatic_business_terms') return 'badge-business';
+      if (categorySlug === 'psychological_concepts') return 'badge-psych';
+      return 'badge-marketing';
+    }
+
+    // Render Current Topic
+    function renderTopic(index) {
+      if (!filteredTopics.length) return;
+      const topic = filteredTopics[index];
+      
+      cardTitle.innerText = topic.title;
+      cardSubtitle.innerText = topic.subtitle;
+      
+      catBadge.innerText = topic.category;
+      catBadge.className = `badge ${getBadgeClass(topic.categorySlug)}`;
+      
+      vibeBadge.innerText = topic.vibe;
+      difficultyBadge.innerText = topic.difficulty;
+      
+      hookText.innerText = `"${topic.hook}"`;
+      hookAltText.innerText = `"${topic.hookAlt}"`;
+      
+      breakdownGrid.innerHTML = topic.breakdown.map(b => `
+        <div class="breakdown-card">
+          <div class="breakdown-tag">${b.label}</div>
+          <div class="breakdown-text">${b.text}</div>
+        </div>
+      `).join('');
+
+      scriptAct1.innerText = topic.scriptBlueprint.hook;
+      scriptAct2.innerText = topic.scriptBlueprint.body;
+      scriptAct3.innerText = topic.scriptBlueprint.cta;
+
+      creatorTipText.innerText = topic.creatorTip;
+
+      researchLinks.innerHTML = topic.researchQueries.map(q => {
+        const url = `https://www.google.com/search?q=${encodeURIComponent(q)}`;
+        return `<a href="${url}" target="_blank" rel="noopener noreferrer" class="research-link">🔗 "${q}"</a>`;
+      }).join('');
+
+      currentIndexNum.innerText = (index + 1);
+      totalTopicsNum.innerText = filteredTopics.length;
+
+      updateSaveBtnState();
+      populateCanvaStudio(topic);
+    }
+
+    // Populate Canva Reel Studio Modal
+    function populateCanvaStudio(topic) {
+      if (!topic || !topic.canvaTemplate) return;
+      canvaStudioTitle.innerText = `${topic.title} — Reel Template`;
+      canvaAudioVibeText.innerText = topic.canvaTemplate.audioVibe;
+      mockupAudioTag.innerText = `🎵 ${topic.canvaTemplate.audioVibe.split('/')[0].trim()}`;
+
+      // Set mockup text
+      const popups = topic.canvaTemplate.popups;
+      if (popups && popups.length > 0) {
+        mockupHookCard.innerText = popups[0].text;
+        mockupKeywordPill.innerText = popups.length > 1 ? popups[1].text : 'KEYWORD POP-UP';
+      }
+
+      // Populate cue table
+      canvaCueTableBody.innerHTML = popups.map(p => `
+        <tr>
+          <td class="cue-time">${p.time}</td>
+          <td class="cue-text">${p.text}</td>
+          <td class="cue-sfx">${p.sfx}</td>
+          <td>${p.effect}</td>
+        </tr>
+      `).join('');
+
+      // Build deep-link search for Canva
+      const query = encodeURIComponent(topic.canvaTemplate.canvaSearchQuery || "instagram reel kinetic caption");
+      directCanvaLink.href = `https://www.canva.com/templates/?query=${query}`;
+    }
+
+    function updateSaveBtnState() {
+      const topic = filteredTopics[currentTopicIndex];
+      if (!topic) return;
+      const isSaved = savedTopicIds.includes(topic.id);
+      saveBtn.classList.toggle('active', isSaved);
+      saveBtn.innerText = isSaved ? '★' : '☆';
+      saveBtn.title = isSaved ? 'Remove from Queue' : 'Save to Queue';
+      savedCountBadge.innerText = savedTopicIds.length;
+    }
+
+    function rollRandomTopic() {
+      if (!filteredTopics.length) return;
+      topicCard.classList.remove('rolling');
+      void topicCard.offsetWidth;
+      topicCard.classList.add('rolling');
+
+      let nextIndex = Math.floor(Math.random() * filteredTopics.length);
+      if (filteredTopics.length > 1 && nextIndex === currentTopicIndex) {
+        nextIndex = (nextIndex + 1) % filteredTopics.length;
+      }
+      currentTopicIndex = nextIndex;
+      renderTopic(currentTopicIndex);
+
+      if (isDirectoryMode || isTrendsMode) {
+        showRandomizer();
+      }
+    }
+
+    function filterByCategory(cat) {
+      currentCategory = cat;
+      if (cat === 'all') {
+        filteredTopics = [...TOPICS_DATA];
+      } else {
+        filteredTopics = TOPICS_DATA.filter(t => t.categorySlug === cat);
+      }
+      currentTopicIndex = 0;
+      renderTopic(currentTopicIndex);
+      renderDirectory();
+    }
+
+    function toggleSaveCurrentTopic() {
+      const topic = filteredTopics[currentTopicIndex];
+      if (!topic) return;
+      
+      const idx = savedTopicIds.indexOf(topic.id);
+      if (idx === -1) {
+        savedTopicIds.push(topic.id);
+        showToast(`Saved "${topic.title}" to Queue!`, '⭐');
+      } else {
+        savedTopicIds.splice(idx, 1);
+        showToast('Removed from Queue', '🗑️');
+      }
+      localStorage.setItem('reel_roulette_saved', JSON.stringify(savedTopicIds));
+      updateSaveBtnState();
+      renderSavedQueue();
+    }
+
+    function renderSavedQueue() {
+      const savedTopics = TOPICS_DATA.filter(t => savedTopicIds.includes(t.id));
+      if (!savedTopics.length) {
+        emptyQueueState.style.display = 'block';
+        savedListContainer.innerHTML = '';
+        return;
+      }
+      emptyQueueState.style.display = 'none';
+      savedListContainer.innerHTML = savedTopics.map(t => `
+        <div class="saved-item">
+          <div class="saved-info">
+            <span class="badge ${getBadgeClass(t.categorySlug)}" style="margin-bottom: 0.35rem;">${t.category}</span>
+            <h4>${t.title}</h4>
+            <p>${t.subtitle}</p>
+          </div>
+          <div style="display: flex; gap: 0.35rem;">
+            <button class="btn-secondary" onclick="loadSpecificTopic('${t.id}')">🎯 View</button>
+            <button class="btn-secondary" onclick="removeFromQueue('${t.id}')" style="color: #f43f5e;">✕</button>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    window.removeFromQueue = function(id) {
+      savedTopicIds = savedTopicIds.filter(i => i !== id);
+      localStorage.setItem('reel_roulette_saved', JSON.stringify(savedTopicIds));
+      updateSaveBtnState();
+      renderSavedQueue();
+      showToast('Removed from Queue');
+    };
+
+    window.loadSpecificTopic = function(id) {
+      const topicIndex = filteredTopics.findIndex(t => t.id === id);
+      if (topicIndex !== -1) {
+        currentTopicIndex = topicIndex;
+        renderTopic(currentTopicIndex);
+      } else {
+        document.querySelector('.pill-btn[data-cat="all"]').click();
+        currentTopicIndex = filteredTopics.findIndex(t => t.id === id);
+        renderTopic(currentTopicIndex);
+      }
+      queueModal.classList.remove('open');
+      showRandomizer();
+      window.scrollTo({ top: 180, behavior: 'smooth' });
+    };
+
+    function renderDirectory() {
+      const query = dirSearchInput.value.toLowerCase().trim();
+      const list = filteredTopics.filter(t => {
+        if (!query) return true;
+        return t.title.toLowerCase().includes(query) ||
+               t.subtitle.toLowerCase().includes(query) ||
+               t.hook.toLowerCase().includes(query) ||
+               t.category.toLowerCase().includes(query) ||
+               t.vibe.toLowerCase().includes(query);
+      });
+
+      dirResultsCount.innerText = list.length;
+      directoryGrid.innerHTML = list.map(t => `
+        <div class="directory-card" onclick="loadSpecificTopic('${t.id}')">
+          <div>
+            <span class="badge ${getBadgeClass(t.categorySlug)}">${t.category}</span>
+            <div class="dir-title">${t.title}</div>
+            <div class="dir-sub">${t.subtitle}</div>
+            <div class="dir-hook-snip">"${t.hook.substring(0, 95)}..."</div>
+          </div>
+          <div class="dir-footer">
+            <span>💡 ${t.viralTrigger}</span>
+            <span style="color: var(--primary); font-weight: 700;">Open Reel Kit →</span>
+          </div>
+        </div>
+      `).join('');
+    }
+
+    function showRandomizer() {
+      isDirectoryMode = false;
+      isTrendsMode = false;
+      randomizerView.style.display = 'block';
+      directoryView.classList.remove('active');
+      trendsView.classList.remove('active');
+      viewIcon.innerText = '📚';
+      viewLabel.innerText = 'Browse All';
+    }
+
+    function showDirectory() {
+      isDirectoryMode = true;
+      isTrendsMode = false;
+      randomizerView.style.display = 'none';
+      directoryView.classList.add('active');
+      trendsView.classList.remove('active');
+      viewIcon.innerText = '🎲';
+      viewLabel.innerText = 'Randomizer';
+      renderDirectory();
+    }
+
+    function showTrends() {
+      isTrendsMode = true;
+      isDirectoryMode = false;
+      randomizerView.style.display = 'none';
+      directoryView.classList.remove('active');
+      trendsView.classList.add('active');
+    }
+
+    // Event Listeners
+    themeToggleBtn.addEventListener('click', toggleTheme);
+
+    rollBtn.addEventListener('click', rollRandomTopic);
+    nextBtn.addEventListener('click', rollRandomTopic);
+    prevBtn.addEventListener('click', () => {
+      if (!filteredTopics.length) return;
+      currentTopicIndex = (currentTopicIndex - 1 + filteredTopics.length) % filteredTopics.length;
+      renderTopic(currentTopicIndex);
+    });
+
+    saveBtn.addEventListener('click', toggleSaveCurrentTopic);
+
+    categoryPills.addEventListener('click', (e) => {
+      const btn = e.target.closest('.pill-btn');
+      if (!btn) return;
+      categoryPills.querySelectorAll('.pill-btn').forEach(b => b.classList.remove('active'));
+      btn.classList.add('active');
+      filterByCategory(btn.dataset.cat);
+    });
+
+    viewToggleBtn.addEventListener('click', () => {
+      if (isDirectoryMode) {
+        showRandomizer();
+      } else {
+        showDirectory();
+      }
+    });
+
+    viewTrendsBtn.addEventListener('click', () => {
+      if (isTrendsMode) {
+        showRandomizer();
+      } else {
+        showTrends();
+      }
+    });
+
+    dirSearchInput.addEventListener('input', renderDirectory);
+
+    // Canva Modal
+    openCanvaModalBtn.addEventListener('click', () => {
+      populateCanvaStudio(filteredTopics[currentTopicIndex]);
+      canvaModal.classList.add('open');
+    });
+    closeCanvaModalBtn.addEventListener('click', () => canvaModal.classList.remove('open'));
+    closeCanvaModalBtn2.addEventListener('click', () => canvaModal.classList.remove('open'));
+    canvaModal.addEventListener('click', (e) => {
+      if (e.target === canvaModal) canvaModal.classList.remove('open');
+    });
+
+    copyCueSheetBtn.addEventListener('click', () => {
+      const topic = filteredTopics[currentTopicIndex];
+      let txt = `🎬 CANVA REEL TIMELINE & KEYWORD POPUPS FOR: ${topic.title}
+Format: 9:16 Vertical Video (1080x1920)
+Suggested Audio: ${topic.canvaTemplate.audioVibe}
+
+`;
+      topic.canvaTemplate.popups.forEach(p => {
+        txt += `[${p.time}] Text: "${p.text}" | Sound: ${p.sfx} | Animation: ${p.effect}
+`;
+      });
+      navigator.clipboard.writeText(txt).then(() => {
+        showToast('Canva Cue Sheet copied!');
+      });
+    });
+
+    // Host Guide Modal
+    hostGuideBtn.addEventListener('click', () => hostModal.classList.add('open'));
+    closeHostModalBtn.addEventListener('click', () => hostModal.classList.remove('open'));
+    closeHostModalBtn2.addEventListener('click', () => hostModal.classList.remove('open'));
+    hostModal.addEventListener('click', (e) => {
+      if (e.target === hostModal) hostModal.classList.remove('open');
+    });
+
+    // Queue Modal
+    savedQueueBtn.addEventListener('click', () => {
+      renderSavedQueue();
+      queueModal.classList.add('open');
+    });
+    closeQueueBtn.addEventListener('click', () => queueModal.classList.remove('open'));
+    queueModal.addEventListener('click', (e) => {
+      if (e.target === queueModal) queueModal.classList.remove('open');
+    });
+
+    clearQueueBtn.addEventListener('click', () => {
+      if (confirm('Clear all saved topics?')) {
+        savedTopicIds = [];
+        localStorage.setItem('reel_roulette_saved', JSON.stringify([]));
+        updateSaveBtnState();
+        renderSavedQueue();
+        showToast('Queue cleared');
+      }
+    });
+
+    exportMarkdownBtn.addEventListener('click', () => {
+      const savedTopics = TOPICS_DATA.filter(t => savedTopicIds.includes(t.id));
+      if (!savedTopics.length) {
+        showToast('No topics saved yet!', '⚠️');
+        return;
+      }
+      let md = `# 🎬 Reel Content Queue\nGenerated via ReelRoulette\n\n`;
+      savedTopics.forEach((t, i) => {
+        md += `## ${i+1}. ${t.title} (${t.category})\n> "${t.hook}"\n\n`;
+        md += `**Audio:** ${t.canvaTemplate.audioVibe}\n\n`;
+        md += `### 🎬 Script\n- **Act 1:** ${t.scriptBlueprint.hook}\n- **Act 2:** ${t.scriptBlueprint.body}\n- **Act 3:** ${t.scriptBlueprint.cta}\n\n---\n\n`;
+      });
+      navigator.clipboard.writeText(md).then(() => {
+        showToast('Full queue copied as Markdown!');
+      });
+    });
+
+    // Copying Actions
+    copyHookBtn.addEventListener('click', () => {
+      const topic = filteredTopics[currentTopicIndex];
+      navigator.clipboard.writeText(topic.hook).then(() => showToast('Opening Hook copied!'));
+    });
+
+    copyScriptBtn.addEventListener('click', () => {
+      const topic = filteredTopics[currentTopicIndex];
+      const scriptText = `HOOK: ${topic.scriptBlueprint.hook}\n\nBODY: ${topic.scriptBlueprint.body}\n\nCTA: ${topic.scriptBlueprint.cta}`;
+      navigator.clipboard.writeText(scriptText).then(() => showToast('3-Act Script copied!'));
+    });
+
+    copyAllBtn.addEventListener('click', () => {
+      const topic = filteredTopics[currentTopicIndex];
+      const fullText = `🎬 REEL TOPIC: ${topic.title}\nCategory: ${topic.category}\n\n🎯 HOOK:\n"${topic.hook}"\n\n📝 SCRIPT:\n${topic.scriptBlueprint.hook}\n${topic.scriptBlueprint.body}\n${topic.scriptBlueprint.cta}\n\n🎨 CANVA BLUEPRINT:\nAudio: ${topic.canvaTemplate.audioVibe}`;
+      navigator.clipboard.writeText(fullText).then(() => showToast('Full Reel Kit copied!'));
+    });
+
+    // Spacebar to roll
+    window.addEventListener('keydown', (e) => {
+      if (e.target.tagName === 'INPUT' || e.target.tagName === 'TEXTAREA') return;
+      if (e.code === 'Space') {
+        e.preventDefault();
+        rollRandomTopic();
+      }
+    });
+
+    // Initial render
+    renderTopic(0);
+  </script>
+</body>
+</html>
